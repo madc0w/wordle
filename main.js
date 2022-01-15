@@ -1,15 +1,19 @@
-let gameContainer,
-	unusedLettersContainer,
-	word,
-	isGameOver,
+let gameContainer, unusedLettersContainer, word, isGameOver;
+const uniqueDict = [],
 	guesses = [''];
 
 function onLoad() {
 	gameContainer = document.getElementById('game-container');
 	unusedLettersContainer = document.getElementById('unused-letters');
 
-	word = dict[Math.floor(Math.random() * dict.length)];
-	console.log(word);
+	for (const dictWord of dict) {
+		if (!uniqueDict.includes(dictWord)) {
+			uniqueDict.push(dictWord);
+		}
+	}
+
+	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
+	// console.log(word);
 
 	document.addEventListener('keyup', keyup);
 	keyup({ key: '' });
@@ -26,7 +30,7 @@ function keyup(e) {
 	) {
 		guesses[guesses.length - 1] = currGuess.substring(0, currGuess.length - 1);
 	} else if (e.key == 'Enter') {
-		if (dict.includes(currGuess.toLowerCase())) {
+		if (uniqueDict.includes(currGuess.toLowerCase())) {
 			if (guesses.length < 6) {
 				guesses.push('');
 			} else {
