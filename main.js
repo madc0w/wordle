@@ -13,7 +13,7 @@ function onLoad() {
 	}
 
 	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
-	// console.log(word);
+	console.log(word);
 
 	document.addEventListener('keyup', keyup);
 	keyup({ key: '' });
@@ -31,11 +31,10 @@ function keyup(e) {
 		guesses[guesses.length - 1] = currGuess.substring(0, currGuess.length - 1);
 	} else if (e.key == 'Enter') {
 		if (uniqueDict.includes(currGuess.toLowerCase())) {
-			if (guesses.length < 6) {
-				guesses.push('');
-			} else {
+			if (guesses.length >= 6) {
 				isGameOver = true;
 			}
+			guesses.push('');
 
 			let unusedLetters = '';
 			for (
@@ -68,8 +67,8 @@ function keyup(e) {
 
 	{
 		let html = '';
-		let guessNum = 0;
-		for (const guess of guesses) {
+		for (let guessNum = 0; guessNum < Math.min(guesses.length, 6); guessNum++) {
+			const guess = guesses[guessNum];
 			if (guess.toLowerCase() == word) {
 				isGameOver = true;
 			}
@@ -79,7 +78,7 @@ function keyup(e) {
 			let i = 0;
 			for (const ch of guess) {
 				let className = '';
-				if (guessNum < guesses.length - 1 || guessNum == 5) {
+				if (guessNum < guesses.length - 1) {
 					if (word[i] == ch.toLowerCase()) {
 						className = 'pos-match';
 					} else if (word.includes(ch.toLowerCase())) {
@@ -94,7 +93,6 @@ function keyup(e) {
 			for (let j = 0; j < 5 - guess.length; j++) {
 				html += `<div class="guess-letter"> &nbsp;</div>`;
 			}
-			guessNum++;
 			html += '</div>';
 		}
 		for (let i = 0; i < 6 - guesses.length; i++) {
