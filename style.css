@@ -1,0 +1,39 @@
+#game-container {
+	width: 404px;
+	min-height: 80px;
+	background-color: bisque;
+	border-radius: 8px;
+}
+
+.guess-letter {
+	display: inline-block;
+	width: 60px;
+	font-size: 42px;
+	margin: 8px;
+	text-align: center;
+	border-radius: 8px;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+.guess-letter.match {
+	background-color: rgb(201, 180, 88);
+}
+
+.guess-letter.pos-match {
+	background-color: rgb(106, 170, 100);
+}
+
+.guess-letter.no-match {
+	background-color: rgb(120, 124, 126);
+}
+
+.not-a-word {
+	background-color: red;
+}
+
+#unused-letters {
+	position: absolute;
+	top: 440px;
+}
