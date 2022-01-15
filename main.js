@@ -1,6 +1,7 @@
 let gameContainer,
 	unusedLettersContainer,
 	word,
+	isGameOver,
 	guesses = [''];
 
 function onLoad() {
@@ -8,21 +9,28 @@ function onLoad() {
 	unusedLettersContainer = document.getElementById('unused-letters');
 
 	word = dict[Math.floor(Math.random() * dict.length)];
+	console.log(word);
 
 	document.addEventListener('keyup', keyup);
-	keyup({ key: ' ' });
+	keyup({ key: '' });
 }
 
 function keyup(e) {
 	// console.log(e);
 	const currGuess = guesses[guesses.length - 1];
 	let isNotAWord;
-	if (['Backspace', 'Delete'].includes(e.key) && currGuess.length > 0) {
+	if (
+		['Backspace', 'Delete'].includes(e.key) &&
+		currGuess.length > 0 &&
+		!isGameOver
+	) {
 		guesses[guesses.length - 1] = currGuess.substring(0, currGuess.length - 1);
 	} else if (e.key == 'Enter') {
-		if (dict.includes(currGuess.toLocaleLowerCase())) {
+		if (dict.includes(currGuess.toLowerCase())) {
 			if (guesses.length < 6) {
 				guesses.push('');
+			} else {
+				isGameOver = true;
 			}
 
 			let unusedLetters = '';
@@ -50,7 +58,7 @@ function keyup(e) {
 		} else {
 			isNotAWord = true;
 		}
-	} else if (e.key.match(/^[a-z]$/i) && currGuess.length < 5) {
+	} else if (e.key.match(/^[a-z]$/i) && currGuess.length < 5 && !isGameOver) {
 		guesses[guesses.length - 1] += e.key.toUpperCase();
 	}
 
@@ -58,6 +66,9 @@ function keyup(e) {
 		let html = '';
 		let guessNum = 0;
 		for (const guess of guesses) {
+			if (guess.toLowerCase() == word) {
+				isGameOver = true;
+			}
 			html += `<div class="guess ${
 				isNotAWord && guessNum == guesses.length - 1 ? 'not-a-word' : ''
 			}">`;
