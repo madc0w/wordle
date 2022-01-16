@@ -4163,4 +4163,5 @@ const dict = [
 	'quack',
 	'clomp',
 	'snark',
+	'conic',
 ];
