@@ -4160,4 +4160,6 @@ const dict = [
 	// added manually
 	'skimp',
 	'sulky',
+	'quack',
+	'clomp',
 ];
