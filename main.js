@@ -45,7 +45,7 @@ function keyup(e) {
 				resultTextContainer.innerHTML =
 					currGuess.toLowerCase() == word
 						? 'You win!'
-						: `You lose.<br/>Why didn't you try <b>${word}</b>?`;
+						: `You lose.<br/>Why didn't you try <span id="answer-word">${word}</span>?`;
 				gameResultContainer.classList.remove('hidden');
 			}
 

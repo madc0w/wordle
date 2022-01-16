@@ -59,6 +59,12 @@ body {
 	text-align: center;
 }
 
+#answer-word {
+	font-weight: bold;
+	color: #44993d;
+	font-size: 40px;
+}
+
 .button {
 	border-radius: 8px;
 	border-style: solid;
