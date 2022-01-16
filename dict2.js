@@ -4166,4 +4166,5 @@ const dict = [
 	'conic',
 	'knead',
 	'droop',
+	'growl',
 ];
