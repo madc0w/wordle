@@ -4,9 +4,19 @@
 		<script type="text/javascript" src="dict2.js"></script>
 		<script type="text/javascript" src="main.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Lato"
+			rel="stylesheet"
+		/>
 	</head>
 	<body onLoad="onLoad()">
 		<div id="game-container"></div>
 		<div id="unused-letters"></div>
+		<div id="game-result" class="hidden">
+			<div id="result-text"></div>
+			<div class="button" onClick="location.href = location.href">
+				Play again!
+			</div>
+		</div>
 	</body>
 </html>

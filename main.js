@@ -1,10 +1,17 @@
-let gameContainer, unusedLettersContainer, word, isGameOver;
+let gameContainer,
+	unusedLettersContainer,
+	gameResultContainer,
+	resultTextContainer,
+	word,
+	isGameOver;
 const uniqueDict = [],
 	guesses = [''];
 
 function onLoad() {
 	gameContainer = document.getElementById('game-container');
 	unusedLettersContainer = document.getElementById('unused-letters');
+	gameResultContainer = document.getElementById('game-result');
+	resultTextContainer = document.getElementById('result-text');
 
 	for (const dictWord of dict) {
 		if (!uniqueDict.includes(dictWord)) {
@@ -20,7 +27,6 @@ function onLoad() {
 }
 
 function keyup(e) {
-	// console.log(e);
 	const currGuess = guesses[guesses.length - 1];
 	let isNotAWord;
 	if (
@@ -34,6 +40,15 @@ function keyup(e) {
 			if (guesses.length >= 6) {
 				isGameOver = true;
 			}
+
+			if (currGuess.toLowerCase() == word || guesses.length >= 6) {
+				resultTextContainer.innerHTML =
+					currGuess.toLowerCase() == word
+						? 'You win!'
+						: `You lose.<br/>Why didn't you try <b>${word}</b>?`;
+				gameResultContainer.classList.remove('hidden');
+			}
+
 			guesses.push('');
 
 			let unusedLetters = '';
