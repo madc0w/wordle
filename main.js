@@ -20,7 +20,7 @@ function onLoad() {
 	}
 
 	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
-	console.log(word);
+	// console.log(word);
 
 	document.addEventListener('keyup', keyup);
 	keyup({ key: '' });
