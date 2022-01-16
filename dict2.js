@@ -3157,7 +3157,6 @@ const dict = [
 	'sizes',
 	'skids',
 	'skims',
-	'skimp',
 	'skins',
 	'skips',
 	'skits',
@@ -4157,4 +4156,8 @@ const dict = [
 	'zings',
 	'zones',
 	'zooms',
+
+	// added manually
+	'skimp',
+	'sulky',
 ];
