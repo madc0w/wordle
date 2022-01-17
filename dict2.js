@@ -4169,4 +4169,6 @@ const dict = [
 	'growl',
 	'belay',
 	'bigot',
+	'pasty',
+	'batty',
 ];
