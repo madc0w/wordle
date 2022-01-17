@@ -2262,7 +2262,6 @@ const dict = [
 	'firth',
 	'slams',
 	'cadre',
-	'cabot',
 	'squat',
 	'koran',
 	'zoned',
