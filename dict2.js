@@ -4171,4 +4171,6 @@ const dict = [
 	'bigot',
 	'pasty',
 	'batty',
+	'taser',
+	'brats',
 ];
