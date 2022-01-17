@@ -4173,4 +4173,6 @@ const dict = [
 	'batty',
 	'taser',
 	'brats',
+	'soupy',
+	'pesky',
 ];
