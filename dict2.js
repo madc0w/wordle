@@ -4175,4 +4175,6 @@ const dict = [
 	'yodel',
 	'foggy',
 	'bloat',
+	'lolly',
+	'louse',
 ];
