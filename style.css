@@ -8,6 +8,7 @@ body {
 	background-color: bisque;
 	border-radius: 8px;
 	margin: 18px;
+	box-shadow: 4px 4px 8px 2px #888;
 }
 
 .guess-letter {
@@ -65,6 +66,84 @@ body {
 	font-size: 40px;
 }
 
+#header {
+	margin: 22px;
+	font-size: 36px;
+	width: 400px;
+	color: #44993d;
+}
+
+#header img {
+	height: 32px;
+	border-radius: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	box-shadow: 4px 4px 8px 2px #888;
+	float: right;
+}
+
+#header img:hover {
+	background-color: #44993d;
+	cursor: pointer;
+}
+
+#clock {
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 196px;
+	vertical-align: top;
+}
+
+#stats-modal .header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#stats-modal .button {
+	position: absolute;
+	top: 356px;
+	left: 22px;
+	width: 80%;
+}
+
+#stats-modal #no-stats {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+#game-stats {
+	margin: 8px;
+}
+
+.num-wins-bar {
+	height: 24px;
+	background-color: #44993d;
+	text-align: right;
+	padding-right: 8px;
+	border-radius: 4px;
+	border-width: 1px;
+	border-color: #222;
+	border-style: solid;
+}
+
+#times {
+	margin-left: 70px;
+}
+
+#times .row {
+	display: inline-block;
+	margin-right: 14px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+#times .label {
+	font-weight: bold;
+}
+
 .button {
 	border-radius: 8px;
 	border-style: solid;
@@ -81,4 +160,19 @@ body {
 
 .button:hover {
 	background-color: #444;
+}
+
+.modal {
+	position: absolute;
+	top: 10%;
+	left: calc(50% - 150px);
+	height: 400px;
+	width: 300px;
+	border-radius: 8px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #222;
+	padding: 8px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px 20px #444;
 }

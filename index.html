@@ -10,6 +10,15 @@
 		/>
 	</head>
 	<body onLoad="onLoad()">
+		<div id="header">
+			Wurdle
+			<div id="clock"></div>
+			<img
+				class="modal-button"
+				src="img/stats icon.png"
+				onClick="showStats()"
+			/>
+		</div>
 		<div id="game-container"></div>
 		<div id="unused-letters"></div>
 		<div id="game-result" class="hidden">
@@ -17,6 +26,12 @@
 			<div class="button" onClick="location.href = location.href">
 				Play again!
 			</div>
+		</div>
+
+		<div id="stats-modal" class="hidden modal">
+			<div class="header">Stats</div>
+			<div id="stats"></div>
+			<div class="button" onClick="clearStats()">Clear stats</div>
 		</div>
 	</body>
 </html>
