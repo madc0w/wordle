@@ -2232,7 +2232,6 @@ const dict = [
 	'fumes',
 	'totem',
 	'harms',
-	'ayers',
 	'carve',
 	'apnea',
 	'swish',
