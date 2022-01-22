@@ -4575,4 +4575,5 @@ const dict = [
 	'smock',
 	'dregs',
 	'icily',
+	'preys',
 ];
