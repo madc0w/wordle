@@ -4573,4 +4573,5 @@ const dict = [
 	'mince',
 	'croon',
 	'doted',
+	'smock',
 ];
