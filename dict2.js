@@ -4582,4 +4582,8 @@ const dict = [
 	'lanky',
 	'lithe',
 	'lumpy',
+	'sayer',
+	'seder',
+	'sneer',
+	'scoot',
 ];
