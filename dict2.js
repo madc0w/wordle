@@ -2370,7 +2370,6 @@ const dict = [
 	'agora',
 	'macho',
 	'keyed',
-	'swann',
 	'jerks',
 	'bagel',
 	'cults',
