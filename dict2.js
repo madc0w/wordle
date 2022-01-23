@@ -4579,4 +4579,5 @@ const dict = [
 	'toddy',
 	'rinds',
 	'trope',
+	'lanky',
 ];
