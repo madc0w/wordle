@@ -4576,4 +4576,6 @@ const dict = [
 	'dregs',
 	'icily',
 	'preys',
+	'bared',
+	'toddy',
 ];
