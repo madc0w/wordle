@@ -4580,4 +4580,6 @@ const dict = [
 	'rinds',
 	'trope',
 	'lanky',
+	'lithe',
+	'lumpy',
 ];
