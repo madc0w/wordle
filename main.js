@@ -212,6 +212,7 @@ function showStats() {
 		const factor = 260 / max;
 
 		let sum = 0;
+		let numGames = 0;
 		html += '<table id="game-stats">';
 		for (let i = 1; i <= 6; i++) {
 			const width = factor * (numWins[i] || 0);
@@ -220,14 +221,15 @@ function showStats() {
 			if (numWins[i]) {
 				html += `<td><div class="num-wins-bar" style="width: ${width}px;">${numWins[i]}</div></td>`;
 				sum += i * numWins[i];
+				numGames += numWins[i];
 			}
 			html += '</tr>';
 		}
 		html += '</table>';
 		html += '<div id="mean-num-guesses-container">';
-		html += `Mean guesses: <span id="mean-num-guesses">${(sum / 6).toFixed(
-			1
-		)}</span>`;
+		html += `Mean guesses: <span id="mean-num-guesses">${(
+			sum / numGames
+		).toFixed(1)}</span>`;
 		html += '</div>';
 	} else {
 		html =
