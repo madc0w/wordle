@@ -144,11 +144,11 @@ body {
 	font-weight: bold;
 }
 
-#mean-num-guesses-container {
+#other-stats-container {
 	margin-left: 28px;
 }
 
-#mean-num-guesses-container #mean-num-guesses {
+#other-stats-container #mean-num-guesses {
 	margin-left: 8px;
 	font-size: 18px;
 	font-weight: bold;

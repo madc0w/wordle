@@ -92,6 +92,11 @@ function keyup(e) {
 						: [];
 					times.push(Math.floor(clock));
 					localStorage.times = JSON.stringify(times);
+				} else {
+					const numLosses = localStorage.numLosses
+						? JSON.parse(localStorage.numLosses)
+						: 0;
+					localStorage.numLosses = numLosses + 1;
 				}
 				const numGames = parseInt(localStorage.numGames || 0) + 1;
 				localStorage.numGames = numGames;
@@ -186,11 +191,11 @@ function showStats() {
 		: 0;
 	let html = '';
 	if (numGames > 0) {
-		let minTime = 1e12;
+		let minTime;
 		let meanTime = 0;
 		for (const time of times) {
 			meanTime += time / times.length;
-			minTime = Math.min(minTime, time);
+			minTime = Math.min(minTime || 1e12, time);
 		}
 		html += '<div id="times">';
 		html += '<div class="row">';
@@ -212,7 +217,7 @@ function showStats() {
 		const factor = 260 / max;
 
 		let sum = 0;
-		let numGames = 0;
+		let num = 0;
 		html += '<table id="game-stats">';
 		for (let i = 1; i <= 6; i++) {
 			const width = factor * (numWins[i] || 0);
@@ -221,15 +226,21 @@ function showStats() {
 			if (numWins[i]) {
 				html += `<td><div class="num-wins-bar" style="width: ${width}px;">${numWins[i]}</div></td>`;
 				sum += i * numWins[i];
-				numGames += numWins[i];
+				num += numWins[i];
 			}
 			html += '</tr>';
 		}
+		const numLosses = JSON.parse(localStorage.numLosses || 0);
+		const numGames = num + numLosses;
 		html += '</table>';
-		html += '<div id="mean-num-guesses-container">';
-		html += `Mean guesses: <span id="mean-num-guesses">${(
-			sum / numGames
-		).toFixed(1)}</span>`;
+		html += '<div id="other-stats-container">';
+		html += `<div>Mean guesses: <span id="mean-num-guesses">${
+			num ? (sum / num).toFixed(1) : '-'
+		}</span></div>`;
+		html += `<div>Games played: <span id="mean-num-guesses">${numGames}</span></div>`;
+		html += `<div>Win ratio: <span id="mean-num-guesses">${
+			numGames ? ((100 * num) / numGames).toFixed(1) : '-'
+		}%</span></div>`;
 		html += '</div>';
 	} else {
 		html =
@@ -254,9 +265,12 @@ function closeModals() {
 }
 
 function formatTime(t) {
-	let secs = Math.round(t % 60);
-	if (secs < 10) {
-		secs = '0' + secs;
+	if (t != null) {
+		let secs = Math.round(t % 60);
+		if (secs < 10) {
+			secs = '0' + secs;
+		}
+		return `${Math.floor(t / 60)}:${secs}`;
 	}
-	return `${Math.floor(t / 60)}:${secs}`;
+	return '-';
 }
