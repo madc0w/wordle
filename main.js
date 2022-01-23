@@ -231,15 +231,15 @@ function showStats() {
 			html += '</tr>';
 		}
 		const numLosses = JSON.parse(localStorage.numLosses || 0);
-		const numGames = num + numLosses;
+		const _numGames = num + numLosses;
 		html += '</table>';
 		html += '<div id="other-stats-container">';
 		html += `<div>Mean guesses: <span id="mean-num-guesses">${
 			num ? (sum / num).toFixed(1) : '-'
 		}</span></div>`;
-		html += `<div>Games played: <span id="mean-num-guesses">${numGames}</span></div>`;
+		html += `<div>Games played: <span id="mean-num-guesses">${_numGames}</span></div>`;
 		html += `<div>Win ratio: <span id="mean-num-guesses">${
-			numGames ? ((100 * num) / numGames).toFixed(1) : '-'
+			_numGames ? ((100 * num) / _numGames).toFixed(1) : '-'
 		}%</span></div>`;
 		html += '</div>';
 	} else {
