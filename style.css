@@ -144,6 +144,16 @@ body {
 	font-weight: bold;
 }
 
+#mean-num-guesses-container {
+	margin-left: 28px;
+}
+
+#mean-num-guesses-container #mean-num-guesses {
+	margin-left: 8px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 .button {
 	border-radius: 8px;
 	border-style: solid;
