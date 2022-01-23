@@ -4586,4 +4586,6 @@ const dict = [
 	'seder',
 	'sneer',
 	'scoot',
+	'goopy',
+	'poopy',
 ];
