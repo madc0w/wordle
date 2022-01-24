@@ -3023,7 +3023,6 @@ const dict = [
 	'deers',
 	'delis',
 	'demos',
-	'denes',
 	'dents',
 	'desks',
 	'dicks',
@@ -3031,7 +3030,7 @@ const dict = [
 	'dikes',
 	'dills',
 	'dimes',
-	'dinks',
+	// 'dinks',
 	'dints',
 	'disks',
 	'divas',
@@ -4590,4 +4589,5 @@ const dict = [
 	'poopy',
 	'paver',
 	'caper',
+	'minks',
 ];
