@@ -4592,4 +4592,6 @@ const dict = [
 	'minks',
 	'ladle',
 	'motes',
+	'feign',
+	'gummy',
 ];
