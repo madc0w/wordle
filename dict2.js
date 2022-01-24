@@ -2616,7 +2616,7 @@ const dict = [
 	'piped',
 	'dells',
 	'boson',
-	'anima',
+	// 'anima',
 	'trams',
 	'octal',
 	'gauze',
