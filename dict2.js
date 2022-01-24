@@ -2186,7 +2186,6 @@ const dict = [
 	'mined',
 	'sores',
 	'titty',
-	'fiori',
 	'reeds',
 	'lofty',
 	'kanji',
