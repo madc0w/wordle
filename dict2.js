@@ -4591,4 +4591,5 @@ const dict = [
 	'caper',
 	'minks',
 	'ladle',
+	'motes',
 ];
