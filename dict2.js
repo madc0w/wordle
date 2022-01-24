@@ -4594,4 +4594,5 @@ const dict = [
 	'motes',
 	'feign',
 	'gummy',
+	'opals',
 ];
