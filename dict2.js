@@ -4596,4 +4596,5 @@ const dict = [
 	'opals',
 	'frisk',
 	'tapir',
+	'gloat',
 ];
