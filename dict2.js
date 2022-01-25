@@ -4598,4 +4598,5 @@ const dict = [
 	'tapir',
 	'gloat',
 	'loner',
+	'faker',
 ];
