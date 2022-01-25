@@ -1930,7 +1930,6 @@ const dict = [
 	'heirs',
 	'twill',
 	'cures',
-	'timex',
 	'brink',
 	'truss',
 	'pinot',
