@@ -4602,4 +4602,5 @@ const dict = [
 	'filch',
 	'tamed',
 	'musty',
+	'clump',
 ];
