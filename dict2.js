@@ -4600,4 +4600,5 @@ const dict = [
 	'faker',
 	'taint',
 	'filch',
+	'tamed',
 ];
