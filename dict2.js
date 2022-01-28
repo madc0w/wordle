@@ -4605,4 +4605,5 @@ const dict = [
 	'clump',
 	'tamer',
 	'saner',
+	'biped',
 ];
