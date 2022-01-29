@@ -4606,4 +4606,6 @@ const dict = [
 	'tamer',
 	'saner',
 	'biped',
+	'mores',
+	'tripe',
 ];
