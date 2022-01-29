@@ -4608,4 +4608,5 @@ const dict = [
 	'biped',
 	'mores',
 	'tripe',
+	'snout',
 ];
