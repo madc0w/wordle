@@ -4609,4 +4609,6 @@ const dict = [
 	'mores',
 	'tripe',
 	'snout',
+	'lodes',
+	'daunt',
 ];
