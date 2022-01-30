@@ -4611,4 +4611,6 @@ const dict = [
 	'snout',
 	'lodes',
 	'daunt',
+	'scuff',
+	'banal',
 ];
