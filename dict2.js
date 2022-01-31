@@ -4616,4 +4616,6 @@ const dict = [
 	'chums',
 	'frill',
 	'boggy',
+	'fizzy',
+	'shirk',
 ];
