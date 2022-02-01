@@ -2363,7 +2363,6 @@ const dict = [
 	'evoke',
 	'foxes',
 	'gully',
-	'pitts',
 	'mites',
 	'agora',
 	'macho',
