@@ -4618,4 +4618,5 @@ const dict = [
 	'boggy',
 	'fizzy',
 	'shirk',
+	'pithy',
 ];
