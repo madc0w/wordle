@@ -707,7 +707,6 @@ const dict = [
 	'texts',
 	'fails',
 	'aging',
-	'alice',
 	'intro',
 	'clerk',
 	'mills',
