@@ -4622,4 +4622,6 @@ const dict = [
 	'gaunt',
 	'foist',
 	'abled',
+	'clime',
+	'clade',
 ];
