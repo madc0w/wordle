@@ -4622,4 +4622,6 @@ const dict = [
 	'abled',
 	'clime',
 	'clade',
+	'pined',
+	'dined',
 ];
