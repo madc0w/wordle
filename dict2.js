@@ -3049,7 +3049,6 @@ const dict = [
 	'draws',
 	'drips',
 	'drugs',
-	'duces',
 	'ducks',
 	'ducts',
 	'dudes',
