@@ -2251,7 +2251,6 @@ const dict = [
 	'rayon',
 	'mocha',
 	'nouns',
-	'tonne',
 	'faxed',
 	'firth',
 	'slams',
@@ -4624,4 +4623,7 @@ const dict = [
 	'clade',
 	'pined',
 	'dined',
+	'curvy',
+	'cress',
+	'glean',
 ];
