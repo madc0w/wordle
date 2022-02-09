@@ -94,14 +94,15 @@ body {
 
 #clock {
 	font-size: 14px;
-	margin-left: 196px;
+	text-align: right;
 	vertical-align: top;
 }
 
 #word-space-size {
 	font-size: 14px;
-	margin-left: 196px;
 	vertical-align: top;
+	text-align: right;
+	width: 224px;
 }
 
 #stats-modal .header {

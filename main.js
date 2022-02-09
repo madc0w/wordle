@@ -26,7 +26,7 @@ function onLoad() {
 			uniqueDict.push(dictWord);
 		}
 	}
-	wordSpaceSizeContainer.innerHTML = uniqueDict.length;
+	wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} possibilities`;
 
 	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
 	// console.log(word);
@@ -108,31 +108,17 @@ function keyup(e) {
 				localStorage.numGames = numGames;
 				localStorage.numWins = JSON.stringify(numWins);
 			} else {
-				let regex = '';
-				let charMatches = [];
-				let i = 0;
-				for (const ch of currGuess) {
-					if (word[i++] == ch.toLowerCase()) {
-						regex += ch.toLowerCase();
-					} else {
-						regex += '.';
-						if (word.includes(ch.toLowerCase())) {
-							charMatches.push(ch.toLowerCase());
-						}
-					}
-				}
-				const r = new RegExp(regex);
 				const n = uniqueDict.filter((w) => {
-					if (w.match(r)) {
-						for (const c of charMatches) {
-							if (!w.includes(c)) {
-								return false;
-							}
+					for (const guess of guesses) {
+						if (!guessMatchesWord(guess, w)) {
+							return false;
 						}
-						return true;
 					}
+					return true;
 				}).length;
-				wordSpaceSizeContainer.innerHTML = n;
+				wordSpaceSizeContainer.innerHTML = `${n} ${
+					n == 1 ? 'possibility' : 'possibilities'
+				}`;
 			}
 
 			guesses.push('');
@@ -315,4 +301,37 @@ function formatTime(t) {
 		return `${Math.floor(t / 60)}:${secs}`;
 	}
 	return '-';
+}
+
+function guessMatchesWord(guess, dictWord) {
+	let regex = '';
+	const charMatches = [];
+	const noCharMatches = [];
+	let i = 0;
+	for (const ch of guess) {
+		if (word[i++] == ch.toLowerCase()) {
+			regex += ch.toLowerCase();
+		} else {
+			regex += '.';
+			if (word.includes(ch.toLowerCase())) {
+				charMatches.push(ch.toLowerCase());
+			} else {
+				noCharMatches.push(ch.toLowerCase());
+			}
+		}
+	}
+	const r = new RegExp(regex);
+	if (dictWord.match(r)) {
+		for (const c of charMatches) {
+			if (!dictWord.includes(c)) {
+				return false;
+			}
+		}
+		for (const c of noCharMatches) {
+			if (dictWord.includes(c)) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
