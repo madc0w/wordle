@@ -4627,4 +4627,5 @@ const dict = [
 	'cress',
 	'glean',
 	'krill',
+	'trite',
 ];
