@@ -5,6 +5,7 @@ let gameContainer,
 	word,
 	isGameOver,
 	clockContainer,
+	wordSpaceSizeContainer,
 	statsContainer,
 	clockTimerId,
 	clock;
@@ -18,12 +19,14 @@ function onLoad() {
 	resultTextContainer = document.getElementById('result-text');
 	clockContainer = document.getElementById('clock');
 	statsContainer = document.getElementById('stats');
+	wordSpaceSizeContainer = document.getElementById('word-space-size');
 
 	for (const dictWord of dict) {
 		if (!uniqueDict.includes(dictWord)) {
 			uniqueDict.push(dictWord);
 		}
 	}
+	wordSpaceSizeContainer.innerHTML = uniqueDict.length;
 
 	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
 	// console.log(word);
@@ -53,7 +56,10 @@ function keyup(e) {
 		currGuess.length > 0 &&
 		!isGameOver
 	) {
-		guesses[guesses.length - 1] = currGuess.substring(0, currGuess.length - 1);
+		guesses[guesses.length - 1] = currGuess.substring(
+			0,
+			currGuess.length - 1
+		);
 	} else if (e.key == 'Escape') {
 		closeModals();
 	} else if (e.key == 'Enter') {
@@ -101,6 +107,32 @@ function keyup(e) {
 				const numGames = parseInt(localStorage.numGames || 0) + 1;
 				localStorage.numGames = numGames;
 				localStorage.numWins = JSON.stringify(numWins);
+			} else {
+				let regex = '';
+				let charMatches = [];
+				let i = 0;
+				for (const ch of currGuess) {
+					if (word[i++] == ch.toLowerCase()) {
+						regex += ch.toLowerCase();
+					} else {
+						regex += '.';
+						if (word.includes(ch.toLowerCase())) {
+							charMatches.push(ch.toLowerCase());
+						}
+					}
+				}
+				const r = new RegExp(regex);
+				const n = uniqueDict.filter((w) => {
+					if (w.match(r)) {
+						for (const c of charMatches) {
+							if (!w.includes(c)) {
+								return false;
+							}
+						}
+						return true;
+					}
+				}).length;
+				wordSpaceSizeContainer.innerHTML = n;
 			}
 
 			guesses.push('');
@@ -117,7 +149,10 @@ function keyup(e) {
 			for (const guess of guesses) {
 				if (guessNum < guesses.length - 1) {
 					for (const ch of guess) {
-						unusedLetters = unusedLetters.replaceAll(ch.toLowerCase(), '');
+						unusedLetters = unusedLetters.replaceAll(
+							ch.toLowerCase(),
+							''
+						);
 					}
 				}
 				guessNum++;
@@ -136,14 +171,19 @@ function keyup(e) {
 
 	{
 		let html = '';
-		for (let guessNum = 0; guessNum < Math.min(guesses.length, 6); guessNum++) {
+		for (
+			let guessNum = 0;
+			guessNum < Math.min(guesses.length, 6);
+			guessNum++
+		) {
 			const guess = guesses[guessNum];
 			if (guess.toLowerCase() == word && e.key == 'Enter') {
 				isGameOver = true;
 				clearInterval(clockTimerId);
 			}
+			const isLastGuess = guessNum == guesses.length - 1;
 			html += `<div class="guess ${
-				isNotAWord && guessNum == guesses.length - 1 ? 'not-a-word' : ''
+				isNotAWord && isLastGuess ? 'not-a-word' : ''
 			}">`;
 			let i = 0;
 			for (const ch of guess) {
@@ -185,7 +225,9 @@ function clearStats() {
 
 function showStats() {
 	const times = localStorage.times ? JSON.parse(localStorage.times) : [];
-	const numWins = localStorage.numWins ? JSON.parse(localStorage.numWins) : {};
+	const numWins = localStorage.numWins
+		? JSON.parse(localStorage.numWins)
+		: {};
 	const numGames = localStorage.numGames
 		? JSON.parse(localStorage.numGames)
 		: 0;

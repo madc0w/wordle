@@ -88,8 +88,17 @@ body {
 	cursor: pointer;
 }
 
-#clock {
+#info {
 	display: inline-block;
+}
+
+#clock {
+	font-size: 14px;
+	margin-left: 196px;
+	vertical-align: top;
+}
+
+#word-space-size {
 	font-size: 14px;
 	margin-left: 196px;
 	vertical-align: top;
