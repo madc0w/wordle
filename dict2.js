@@ -4626,4 +4626,5 @@ const dict = [
 	'curvy',
 	'cress',
 	'glean',
+	'krill',
 ];
