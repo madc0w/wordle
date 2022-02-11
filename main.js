@@ -294,7 +294,8 @@ function closeModals() {
 
 function formatTime(t) {
 	if (t != null) {
-		let secs = Math.round(t % 60);
+		t = Math.ceil(t);
+		let secs = t % 60;
 		if (secs < 10) {
 			secs = '0' + secs;
 		}
