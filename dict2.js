@@ -4626,4 +4626,5 @@ const dict = [
 	'lunge',
 	'fumed',
 	'bream',
+	'newts',
 ];
