@@ -310,15 +310,15 @@ function guessMatchesWord(guess, dictWord) {
 	const noCharMatches = [];
 	let i = 0;
 	for (const ch of guess) {
-		if (word[i++] == ch.toLowerCase()) {
-			regex += ch.toLowerCase();
+		const lcChar = ch.toLowerCase();
+		if (word[i++] == lcChar) {
+			regex += lcChar;
+		} else if (word.includes(lcChar)) {
+			regex += `[^${lcChar}]`;
+			charMatches.push(lcChar);
 		} else {
 			regex += '.';
-			if (word.includes(ch.toLowerCase())) {
-				charMatches.push(ch.toLowerCase());
-			} else {
-				noCharMatches.push(ch.toLowerCase());
-			}
+			noCharMatches.push(lcChar);
 		}
 	}
 	const r = new RegExp(regex);
