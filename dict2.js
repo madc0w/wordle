@@ -3799,7 +3799,6 @@ const dict = [
 	'cakes',
 	'calls',
 	'calms',
-	'camps',
 	'canes',
 	'capes',
 	'cards',
@@ -4627,4 +4626,5 @@ const dict = [
 	'fumed',
 	'bream',
 	'newts',
+	'campy',
 ];
