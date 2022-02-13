@@ -4631,4 +4631,5 @@ const dict = [
 	'ogled',
 	'slosh',
 	'slush',
+	'pleat',
 ];
