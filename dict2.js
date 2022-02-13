@@ -4628,4 +4628,7 @@ const dict = [
 	'newts',
 	'campy',
 	'caulk',
+	'ogled',
+	'slosh',
+	'slush',
 ];
