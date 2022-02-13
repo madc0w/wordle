@@ -4633,4 +4633,5 @@ const dict = [
 	'slush',
 	'pleat',
 	'goner',
+	'rebus',
 ];
