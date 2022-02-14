@@ -4637,4 +4637,5 @@ const dict = [
 	'bendy',
 	'dumpy',
 	'koans',
+	'scaly',
 ];
