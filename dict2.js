@@ -4638,4 +4638,6 @@ const dict = [
 	'dumpy',
 	'koans',
 	'scaly',
+	'slunk',
+	'fifer',
 ];
