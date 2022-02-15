@@ -4640,4 +4640,6 @@ const dict = [
 	'scaly',
 	'slunk',
 	'fifer',
+	'mired',
+	'duped',
 ];
