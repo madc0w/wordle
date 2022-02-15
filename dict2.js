@@ -4642,4 +4642,5 @@ const dict = [
 	'fifer',
 	'mired',
 	'duped',
+	'ruder',
 ];
