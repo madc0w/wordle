@@ -4647,4 +4647,5 @@ const dict = [
 	'sleet',
 	'stave',
 	'lorry',
+	'dimly',
 ];
