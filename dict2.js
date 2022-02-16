@@ -4643,4 +4643,8 @@ const dict = [
 	'mired',
 	'duped',
 	'ruder',
+	'mirth',
+	'sleet',
+	'stave',
+	'lorry',
 ];
