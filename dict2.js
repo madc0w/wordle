@@ -4647,4 +4647,6 @@ const dict = [
 	'lorry',
 	'dimly',
 	'dolly',
+	'waded',
+	'bleat',
 ];
