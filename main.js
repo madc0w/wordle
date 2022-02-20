@@ -7,11 +7,13 @@ let gameContainer,
 	clockContainer,
 	wordSpaceSizeContainer,
 	statsContainer,
+	wordPossibilitiesContainer,
 	clockTimerId,
-	clock;
+	clock,
+	possibilities = [];
 const uniqueDict = [],
-	guesses = [''];
-
+	guesses = [''],
+	numPossibilities = [];
 function onLoad() {
 	gameContainer = document.getElementById('game-container');
 	unusedLettersContainer = document.getElementById('unused-letters');
@@ -19,6 +21,7 @@ function onLoad() {
 	resultTextContainer = document.getElementById('result-text');
 	clockContainer = document.getElementById('clock');
 	statsContainer = document.getElementById('stats');
+	wordPossibilitiesContainer = document.getElementById('word-possibilities');
 	wordSpaceSizeContainer = document.getElementById('word-space-size');
 
 	for (const dictWord of dict) {
@@ -79,7 +82,7 @@ function keyup(e) {
 			}
 
 			const isWin = currGuess.toLowerCase() == word;
-			if (isWin || guesses.length >= 6) {
+			if (isWin || isGameOver) {
 				clearInterval(clockTimerId);
 				resultTextContainer.innerHTML = isWin
 					? 'You win!'
@@ -108,17 +111,32 @@ function keyup(e) {
 				localStorage.numGames = numGames;
 				localStorage.numWins = JSON.stringify(numWins);
 			} else {
-				const n = uniqueDict.filter((w) => {
+				possibilities = uniqueDict.filter((w) => {
 					for (const guess of guesses) {
 						if (!guessMatchesWord(guess, w)) {
 							return false;
 						}
 					}
 					return true;
-				}).length;
+				});
+				const n = possibilities.length;
+				numPossibilities.push(n);
+				console.log(numPossibilities);
 				wordSpaceSizeContainer.innerHTML = `${n} ${
 					n == 1 ? 'possibility' : 'possibilities'
 				}`;
+			}
+			if (isWin || isGameOver) {
+				wordSpaceSizeContainer.classList.add('game-over');
+				let html2 = '';
+				for (const possibility of possibilities) {
+					html2 += `<div>${possibility}</div>`;
+				}
+				wordPossibilitiesContainer.innerHTML = html2;
+
+				wordSpaceSizeContainer.addEventListener('click', () => {
+					showModal('possibilities');
+				});
 			}
 
 			guesses.push('');
@@ -145,7 +163,10 @@ function keyup(e) {
 			}
 			let html = '';
 			for (const ch of unusedLetters.toUpperCase()) {
-				html += `<div class="guess-letter">${ch}</div>`;
+				const isVowel = 'AEIOUY'.includes(ch);
+				html += `<div class="guess-letter ${
+					isVowel ? 'vowel' : ''
+				}">${ch}</div>`;
 			}
 			unusedLettersContainer.innerHTML = html;
 		} else {
@@ -188,6 +209,9 @@ function keyup(e) {
 			}
 			for (let j = 0; j < 5 - guess.length; j++) {
 				html += `<div class="guess-letter"> &nbsp;</div>`;
+			}
+			if (numPossibilities[guessNum]) {
+				html += `<div class="guess-letter num-possibilities">${numPossibilities[guessNum]}</div>`;
 			}
 			html += '</div>';
 		}

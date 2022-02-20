@@ -3,7 +3,7 @@ body {
 }
 
 #game-container {
-	width: 404px;
+	width: 492px;
 	min-height: 80px;
 	background-color: bisque;
 	border-radius: 8px;
@@ -21,6 +21,18 @@ body {
 	border-style: solid;
 	border-color: black;
 	border-width: 2px;
+}
+
+.guess-letter.num-possibilities {
+	font-size: 14px;
+	border-color: transparent;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	vertical-align: top;
+}
+
+.guess-letter.vowel {
+	background-color: rgb(206, 255, 200);
 }
 
 .guess-letter.match {
@@ -105,7 +117,19 @@ body {
 	width: 224px;
 }
 
-#stats-modal .header {
+#word-space-size.game-over {
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#word-possibilities {
+	overflow: auto;
+	height: 310px;
+	margin-bottom: 12px;
+}
+
+.modal .header {
 	text-align: center;
 	font-weight: bold;
 	font-size: 22px;

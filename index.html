@@ -14,7 +14,7 @@
 			Wurdle
 			<div id="info">
 				<div id="clock"></div>
-				<div id="word-space-size"></div>
+				<div id="word-space-size" class="modal-button"></div>
 			</div>
 			<img
 				class="modal-button"
@@ -35,6 +35,11 @@
 			<div class="header">Stats</div>
 			<div id="stats"></div>
 			<div class="button" onClick="clearStats()">Clear stats</div>
+		</div>
+		<div id="possibilities" class="hidden modal">
+			<div class="header">Possibilities</div>
+			<div id="word-possibilities"></div>
+			<div class="button" onClick="closeModals()">OK</div>
 		</div>
 	</body>
 </html>
