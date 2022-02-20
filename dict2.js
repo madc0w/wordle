@@ -4653,4 +4653,10 @@ const dict = [
 	'coons',
 	'kooky',
 	'kooks',
+	'sated',
+	'ficus',
+	'stoop',
+	'snood',
+	'spook',
+	'tardy',
 ];
