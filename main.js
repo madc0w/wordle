@@ -263,7 +263,7 @@ function showStats() {
 		html += '</table>';
 		html += '<div id="other-stats-container">';
 		html += `<div>Mean guesses: <span id="mean-num-guesses">${
-			num ? (sum / num).toFixed(1) : '-'
+			num ? (sum / num).toFixed(2) : '-'
 		}</span></div>`;
 		html += `<div>Games played: <span id="mean-num-guesses">${_numGames}</span></div>`;
 		html += `<div>Win ratio: <span id="mean-num-guesses">${
