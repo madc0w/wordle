@@ -210,7 +210,7 @@ function keyup(e) {
 			for (let j = 0; j < 5 - guess.length; j++) {
 				html += `<div class="guess-letter"> &nbsp;</div>`;
 			}
-			if (numPossibilities[guessNum]) {
+			if (numPossibilities[guessNum] > 1) {
 				html += `<div class="guess-letter num-possibilities">${numPossibilities[guessNum]}</div>`;
 			}
 			html += '</div>';

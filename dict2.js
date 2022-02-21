@@ -2136,7 +2136,6 @@ const dict = [
 	'bleak',
 	'tramp',
 	'safes',
-	'stubs',
 	'dents',
 	'perks',
 	'vibes',
@@ -4390,7 +4389,6 @@ const dict = [
 	'stirs',
 	'stops',
 	'stows',
-	'stubs',
 	'studs',
 	'sucks',
 	'suits',
@@ -4660,4 +4658,5 @@ const dict = [
 	'spook',
 	'tardy',
 	'tarry',
+	'stuns',
 ];
