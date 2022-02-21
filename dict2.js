@@ -4659,4 +4659,5 @@ const dict = [
 	'tardy',
 	'tarry',
 	'stuns',
+	'lieds',
 ];

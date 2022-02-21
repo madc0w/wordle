@@ -29,6 +29,7 @@ body {
 	padding-top: 4px;
 	padding-bottom: 4px;
 	vertical-align: top;
+	width: 42px;
 }
 
 .guess-letter.vowel {
@@ -116,12 +117,12 @@ body {
 	text-align: right;
 	width: 224px;
 }
-
-#word-space-size.game-over {
+/* 
+.game-over {
 	cursor: pointer;
 	text-decoration: underline;
 	font-weight: bold;
-}
+} */
 
 #word-possibilities {
 	overflow: auto;
@@ -192,7 +193,7 @@ body {
 	border-radius: 8px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #222;
+	border-color: #222 !important;
 	padding: 8px;
 	background-color: #44993d;
 	cursor: pointer;

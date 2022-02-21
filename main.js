@@ -13,7 +13,7 @@ let gameContainer,
 	possibilities = [];
 const uniqueDict = [],
 	guesses = [''],
-	numPossibilities = [];
+	guessPossibilities = [];
 function onLoad() {
 	gameContainer = document.getElementById('game-container');
 	unusedLettersContainer = document.getElementById('unused-letters');
@@ -120,25 +120,12 @@ function keyup(e) {
 					return true;
 				});
 				const n = possibilities.length;
-				numPossibilities.push(n);
+				guessPossibilities.push(possibilities);
 				// console.log(numPossibilities);
 				wordSpaceSizeContainer.innerHTML = `${n} ${
 					n == 1 ? 'possibility' : 'possibilities'
 				}`;
 			}
-			if (possibilities.length > 1 && (isWin || isGameOver)) {
-				wordSpaceSizeContainer.classList.add('game-over');
-				let html2 = '';
-				for (const possibility of possibilities) {
-					html2 += `<div>${possibility}</div>`;
-				}
-				wordPossibilitiesContainer.innerHTML = html2;
-
-				wordSpaceSizeContainer.addEventListener('click', () => {
-					showModal('possibilities');
-				});
-			}
-
 			guesses.push('');
 
 			let unusedLetters = '';
@@ -210,8 +197,17 @@ function keyup(e) {
 			for (let j = 0; j < 5 - guess.length; j++) {
 				html += `<div class="guess-letter"> &nbsp;</div>`;
 			}
-			if (numPossibilities[guessNum]) {
-				html += `<div class="guess-letter num-possibilities">${numPossibilities[guessNum]}</div>`;
+			if (guessPossibilities[guessNum]) {
+				const _isGameOver =
+					currGuess.toLowerCase() == word || isGameOver;
+				const onClick = _isGameOver
+					? `showGuessPossibilities(${guessNum})`
+					: '';
+				html += `<div class="guess-letter num-possibilities ${
+					_isGameOver ? 'game-over button modal-button' : ''
+				}" onClick="${onClick}" >${
+					guessPossibilities[guessNum].length
+				}</div>`;
 			}
 			html += '</div>';
 		}
@@ -359,4 +355,13 @@ function guessMatchesWord(guess, dictWord) {
 		}
 		return true;
 	}
+}
+
+function showGuessPossibilities(guessNum) {
+	let html = '';
+	for (const possibility of guessPossibilities[guessNum]) {
+		html += `<div>${possibility}</div>`;
+	}
+	wordPossibilitiesContainer.innerHTML = html;
+	showModal('possibilities');
 }
