@@ -121,12 +121,12 @@ function keyup(e) {
 				});
 				const n = possibilities.length;
 				numPossibilities.push(n);
-				console.log(numPossibilities);
+				// console.log(numPossibilities);
 				wordSpaceSizeContainer.innerHTML = `${n} ${
 					n == 1 ? 'possibility' : 'possibilities'
 				}`;
 			}
-			if (isWin || isGameOver) {
+			if (possibilities.length > 1 && (isWin || isGameOver)) {
 				wordSpaceSizeContainer.classList.add('game-over');
 				let html2 = '';
 				for (const possibility of possibilities) {
@@ -210,7 +210,7 @@ function keyup(e) {
 			for (let j = 0; j < 5 - guess.length; j++) {
 				html += `<div class="guess-letter"> &nbsp;</div>`;
 			}
-			if (numPossibilities[guessNum] > 1) {
+			if (numPossibilities[guessNum]) {
 				html += `<div class="guess-letter num-possibilities">${numPossibilities[guessNum]}</div>`;
 			}
 			html += '</div>';
