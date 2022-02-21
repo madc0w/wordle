@@ -120,6 +120,7 @@ function keyup(e) {
 					return true;
 				});
 				const n = possibilities.length;
+				possibilities.sort();
 				guessPossibilities.push(possibilities);
 				// console.log(numPossibilities);
 				wordSpaceSizeContainer.innerHTML = `${n} ${
