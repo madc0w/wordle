@@ -4660,4 +4660,9 @@ const dict = [
 	'lieds',
 	'trots',
 	'skiff',
+	'sidle',
+	'singe',
+	'siege',
+	'sinew',
+	'dingy',
 ];
