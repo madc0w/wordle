@@ -4665,4 +4665,5 @@ const dict = [
 	'siege',
 	'sinew',
 	'dingy',
+	'trill',
 ];
