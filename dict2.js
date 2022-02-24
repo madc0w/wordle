@@ -4668,4 +4668,7 @@ const dict = [
 	'gofer',
 	'puked',
 	'lemur',
+	'fetid',
+	'timid',
+	'tepid',
 ];
