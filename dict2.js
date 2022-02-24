@@ -3434,7 +3434,6 @@ const dict = [
 	'proms',
 	'props',
 	'puffs',
-	'pukes',
 	'pulls',
 	'pumas',
 	'pumps',
@@ -4666,4 +4665,7 @@ const dict = [
 	'sinew',
 	'dingy',
 	'trill',
+	'gofer',
+	'puked',
+	'lemur',
 ];
