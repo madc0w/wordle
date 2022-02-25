@@ -4671,4 +4671,7 @@ const dict = [
 	'fetid',
 	'timid',
 	'tepid',
+	'snide',
+	'napes',
+	'grope',
 ];
