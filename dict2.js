@@ -4674,4 +4674,12 @@ const dict = [
 	'snide',
 	'napes',
 	'grope',
+	'slimy',
+	'glint',
+	'plink',
+	'droll',
+	'caned',
+	'caped',
+	'caked',
+	'downy',
 ];
