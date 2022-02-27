@@ -4682,4 +4682,6 @@ const dict = [
 	'caped',
 	'caked',
 	'downy',
+	'wombs',
+	'ached',
 ];
