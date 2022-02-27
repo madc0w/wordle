@@ -4684,4 +4684,6 @@ const dict = [
 	'downy',
 	'wombs',
 	'ached',
+	'pluto',
+	'scoff',
 ];
