@@ -4686,4 +4686,6 @@ const dict = [
 	'ached',
 	'pluto',
 	'scoff',
+	'rarer',
+	'minty',
 ];
