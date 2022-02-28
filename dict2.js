@@ -4688,4 +4688,6 @@ const dict = [
 	'scoff',
 	'rarer',
 	'minty',
+	'gored',
+	'strum',
 ];
