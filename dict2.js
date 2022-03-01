@@ -4690,4 +4690,5 @@ const dict = [
 	'minty',
 	'gored',
 	'strum',
+	'mowed',
 ];
