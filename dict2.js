@@ -4691,4 +4691,10 @@ const dict = [
 	'gored',
 	'strum',
 	'mowed',
+	'scone',
+	'scald',
+	'fazed',
+	'anise',
+	'dunce',
+	'belch',
 ];
