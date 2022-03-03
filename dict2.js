@@ -4697,4 +4697,5 @@ const dict = [
 	'anise',
 	'dunce',
 	'belch',
+	'tabby',
 ];
