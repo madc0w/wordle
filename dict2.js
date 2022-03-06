@@ -4700,5 +4700,8 @@ const dict = [
 	'tabby',
 	'booby',
 	'sappy',
-	'czars' 
+	'czars',
+	'balsa',
+	'plied',
+	'dowry',
 ];
