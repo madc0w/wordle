@@ -4698,4 +4698,7 @@ const dict = [
 	'dunce',
 	'belch',
 	'tabby',
+	'booby',
+	'sappy',
+	'czars' 
 ];
