@@ -4704,4 +4704,5 @@ const dict = [
 	'balsa',
 	'plied',
 	'dowry',
+	'cuter',
 ];
