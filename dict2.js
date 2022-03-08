@@ -4472,7 +4472,6 @@ const dict = [
 	'wails',
 	'waits',
 	'wakes',
-	'wales',
 	'walks',
 	'walls',
 	'wanes',
