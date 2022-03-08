@@ -4706,4 +4706,5 @@ const dict = [
 	'cuter',
 	'noose',
 	'posit',
+	'roped',
 ];
