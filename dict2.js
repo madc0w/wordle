@@ -1429,7 +1429,6 @@ const dict = [
 	'studs',
 	'roast',
 	'petty',
-	'felix',
 	'shiny',
 	'smash',
 	'ample',
