@@ -4697,4 +4697,6 @@ const dict = [
 	'posit',
 	'roped',
 	'scowl',
+	'embue',
+	'imbue',
 ];
