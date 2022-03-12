@@ -4699,4 +4699,6 @@ const dict = [
 	'scowl',
 	'embue',
 	'imbue',
+	'gauss',
+	'ramen',
 ];
