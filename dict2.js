@@ -4704,4 +4704,5 @@ const dict = [
 	'cagey',
 	'staid',
 	'rebar',
+	'quell',
 ];
