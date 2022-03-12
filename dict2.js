@@ -4701,4 +4701,7 @@ const dict = [
 	'imbue',
 	'gauss',
 	'ramen',
+	'cagey',
+	'staid',
+	'rebar',
 ];
