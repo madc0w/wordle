@@ -2782,7 +2782,6 @@ const dict = [
 	'winks',
 	'hulls',
 	'friar',
-	'blume',
 	'pansy',
 	'dingo',
 	'baggy',
@@ -4705,4 +4704,5 @@ const dict = [
 	'staid',
 	'rebar',
 	'quell',
+	'clefs',
 ];
