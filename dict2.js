@@ -4704,4 +4704,6 @@ const dict = [
 	'quell',
 	'clefs',
 	'raspy',
+	'elope',
+	'blocs',
 ];
