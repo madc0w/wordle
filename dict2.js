@@ -1714,8 +1714,6 @@ const dict = [
 	'weave',
 	'exits',
 	'siena',
-	'reiki',
-	'lange',
 	'cured',
 	'buggy',
 	'slack',
@@ -4704,4 +4702,5 @@ const dict = [
 	'raspy',
 	'elope',
 	'blocs',
+	'guava',
 ];
