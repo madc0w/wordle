@@ -4703,4 +4703,5 @@ const dict = [
 	'elope',
 	'blocs',
 	'guava',
+	'floes',
 ];
