@@ -4707,4 +4707,5 @@ const dict = [
 	'chomp',
 	'scram',
 	'balmy',
+	'abbot',
 ];
