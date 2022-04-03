@@ -4708,4 +4708,5 @@ const dict = [
 	'scram',
 	'balmy',
 	'abbot',
+	'foamy',
 ];
