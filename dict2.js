@@ -4710,4 +4710,5 @@ const dict = [
 	'loony',
 	'loopy',
 	'skink',
+	'blimp',
 ];
