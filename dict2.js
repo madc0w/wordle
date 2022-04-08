@@ -4711,4 +4711,5 @@ const dict = [
 	'loopy',
 	'skink',
 	'blimp',
+	'kilos',
 ];
