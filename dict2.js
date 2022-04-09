@@ -4712,4 +4712,5 @@ const dict = [
 	'skink',
 	'blimp',
 	'kilos',
+	'paled',
 ];
