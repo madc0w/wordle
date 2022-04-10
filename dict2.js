@@ -1459,7 +1459,6 @@ const dict = [
 	'dwarf',
 	'pines',
 	'urges',
-	'codec',
 	'beams',
 	'props',
 	'dough',
@@ -2565,7 +2564,6 @@ const dict = [
 	'bugle',
 	'fours',
 	'comer',
-	'redox',
 	'bimbo',
 	'waged',
 	'waxed',
@@ -4713,4 +4711,5 @@ const dict = [
 	'blimp',
 	'kilos',
 	'paled',
+	'waver',
 ];
