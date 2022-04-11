@@ -4712,4 +4712,5 @@ const dict = [
 	'kilos',
 	'paled',
 	'waver',
+	'elegy',
 ];
