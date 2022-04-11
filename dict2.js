@@ -4713,4 +4713,5 @@ const dict = [
 	'paled',
 	'waver',
 	'elegy',
+	'bossy',
 ];
