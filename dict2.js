@@ -2675,7 +2675,6 @@ const dict = [
 	'silos',
 	'giddy',
 	'oaths',
-	'yoder',
 	'hells',
 	'broil',
 	'cacti',
@@ -4716,4 +4715,7 @@ const dict = [
 	'bossy',
 	'tress',
 	'ennui',
+	'botch',
+	'odder',
+	'raked',
 ];
