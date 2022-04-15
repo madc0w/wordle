@@ -4718,4 +4718,6 @@ const dict = [
 	'odder',
 	'raked',
 	'guppy',
+	'lamer',
+	'paged',
 ];
