@@ -1791,7 +1791,6 @@ const dict = [
 	'hertz',
 	'flown',
 	'silky',
-	'micah',
 	'repay',
 	'await',
 	'fetus',
@@ -4718,4 +4717,5 @@ const dict = [
 	'botch',
 	'odder',
 	'raked',
+	'guppy',
 ];
