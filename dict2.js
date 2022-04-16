@@ -4722,4 +4722,5 @@ const dict = [
 	'paged',
 	'tubas',
 	'antic',
+	'wilts',
 ];
