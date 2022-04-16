@@ -4721,4 +4721,5 @@ const dict = [
 	'lamer',
 	'paged',
 	'tubas',
+	'antic',
 ];
