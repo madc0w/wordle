@@ -4720,4 +4720,5 @@ const dict = [
 	'guppy',
 	'lamer',
 	'paged',
+	'tubas',
 ];
