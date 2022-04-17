@@ -4723,4 +4723,5 @@ const dict = [
 	'tubas',
 	'antic',
 	'wilts',
+	'chide',
 ];
