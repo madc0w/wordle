@@ -2140,7 +2140,6 @@ const dict = [
 	'crabs',
 	'piggy',
 	'saber',
-	'folic',
 	'lager',
 	'divas',
 	'babel',
@@ -4726,4 +4725,6 @@ const dict = [
 	'chide',
 	'gluon',
 	'dowel',
+	'wordy',
+	'cusps',
 ];
