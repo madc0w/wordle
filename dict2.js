@@ -4725,4 +4725,5 @@ const dict = [
 	'wilts',
 	'chide',
 	'gluon',
+	'dowel',
 ];
