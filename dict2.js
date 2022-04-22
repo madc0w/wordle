@@ -4725,4 +4725,5 @@ const dict = [
 	'dowel',
 	'wordy',
 	'cusps',
+	'snore',
 ];
