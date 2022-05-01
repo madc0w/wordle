@@ -2145,7 +2145,7 @@ const dict = [
 	'brood',
 	'azure',
 	'sniff',
-	'botox',
+	// 'botox',
 	'posse',
 	'pixie',
 	'unset',
@@ -4726,4 +4726,5 @@ const dict = [
 	'wordy',
 	'cusps',
 	'snore',
+	'untie',
 ];
