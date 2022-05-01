@@ -4727,4 +4727,5 @@ const dict = [
 	'cusps',
 	'snore',
 	'untie',
+	'mimed',
 ];
