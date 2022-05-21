@@ -4728,4 +4728,5 @@ const dict = [
 	'snore',
 	'untie',
 	'mimed',
+	'exise',
 ];
