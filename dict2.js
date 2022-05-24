@@ -4729,4 +4729,5 @@ const dict = [
 	'untie',
 	'mimed',
 	'exise',
+	'tryst',
 ];
