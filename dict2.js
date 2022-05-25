@@ -4730,4 +4730,5 @@ const dict = [
 	'mimed',
 	'exise',
 	'tryst',
+	'bated',
 ];
