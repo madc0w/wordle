@@ -1763,7 +1763,7 @@ const dict = [
 	'smoky',
 	'flirt',
 	'slang',
-	'largo',
+	// 'largo',
 	'tally',
 	'creep',
 	'agile',
@@ -4728,7 +4728,7 @@ const dict = [
 	'snore',
 	'untie',
 	'mimed',
-	'exise',
 	'tryst',
 	'bated',
+	'prowl',
 ];
