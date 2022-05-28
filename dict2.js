@@ -4731,4 +4731,5 @@ const dict = [
 	'tryst',
 	'bated',
 	'prowl',
+	'flunk',
 ];
