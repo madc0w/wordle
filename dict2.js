@@ -4732,4 +4732,6 @@ const dict = [
 	'bated',
 	'prowl',
 	'flunk',
+	'atune',
+	'atone',
 ];
