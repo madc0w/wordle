@@ -52,6 +52,9 @@ function onLoad() {
 }
 
 function keyup(e) {
+	if (isGameOver) {
+		return;
+	}
 	const currGuess = guesses[guesses.length - 1];
 	let isNotAWord;
 	if (
@@ -200,7 +203,8 @@ function keyup(e) {
 			}
 			if (guessPossibilities[guessNum]) {
 				const _isGameOver =
-					currGuess.toLowerCase() == word || isGameOver;
+					(currGuess.toLowerCase() == word && e.key == 'Enter') ||
+					isGameOver;
 				const onClick = _isGameOver
 					? `showGuessPossibilities(${guessNum})`
 					: '';
