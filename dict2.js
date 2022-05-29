@@ -4734,4 +4734,5 @@ const dict = [
 	'flunk',
 	'atune',
 	'atone',
+	'sewed',
 ];
