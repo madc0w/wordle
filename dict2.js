@@ -4735,4 +4735,5 @@ const dict = [
 	'atune',
 	'atone',
 	'sewed',
+	'karst',
 ];
