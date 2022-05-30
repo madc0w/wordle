@@ -4736,4 +4736,5 @@ const dict = [
 	'atone',
 	'sewed',
 	'karst',
+	'plunk',
 ];
