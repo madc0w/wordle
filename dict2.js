@@ -4740,4 +4740,5 @@ const dict = [
 	'irate',
 	'frond',
 	'fount',
+	'biome',
 ];
