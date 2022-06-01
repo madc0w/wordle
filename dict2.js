@@ -4737,4 +4737,5 @@ const dict = [
 	'sewed',
 	'karst',
 	'plunk',
+	'irate',
 ];
