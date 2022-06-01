@@ -4738,4 +4738,5 @@ const dict = [
 	'karst',
 	'plunk',
 	'irate',
+	'frond',
 ];
