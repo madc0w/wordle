@@ -4743,4 +4743,5 @@ const dict = [
 	'biome',
 	'runny',
 	'shill',
+	'swill',
 ];
