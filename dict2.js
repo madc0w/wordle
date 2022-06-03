@@ -4744,4 +4744,5 @@ const dict = [
 	'runny',
 	'shill',
 	'swill',
+	'pucks',
 ];
