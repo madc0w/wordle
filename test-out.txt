@@ -1,0 +1,29 @@
+about: 1/3506
+mean: 295.24
+max: 618
+
+other: 2/3506
+mean: 189.49
+max: 477
+
+which: 3/3506
+mean: 931.95
+max: 1703
+
+their: 4/3506
+mean: 206.97
+max: 519
+
+there: 5/3506
+mean: 313.52
+max: 778
+
+first: 6/3506
+mean: 231.70
+max: 599
+
+would: 7/3506
+mean: 405.40
+max: 1025
+
+these: 8/3506

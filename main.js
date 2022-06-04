@@ -32,6 +32,7 @@ function onLoad() {
 	wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} possibilities`;
 
 	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
+	// word = uniqueDict[0];
 	// console.log(word);
 
 	document.addEventListener('keyup', keyup);

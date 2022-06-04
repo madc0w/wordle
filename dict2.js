@@ -1,5 +1,5 @@
 // from https://www.kaggle.com/rtatman/english-word-frequency
-const dict = [
+dict = [
 	'about',
 	'other',
 	'which',
@@ -4748,4 +4748,5 @@ const dict = [
 	'beefy',
 	'blurt',
 	'shush',
+	'annul',
 ];
