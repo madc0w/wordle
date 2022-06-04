@@ -4746,4 +4746,5 @@ const dict = [
 	'swill',
 	'pucks',
 	'beefy',
+	'blurt',
 ];
