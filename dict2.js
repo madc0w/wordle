@@ -4759,4 +4759,5 @@ dict = [
 	'meson',
 	'seedy',
 	'brawn',
+	'slake',
 ];
