@@ -40,6 +40,10 @@ body {
 	background-color: rgb(201, 180, 88);
 }
 
+.guess-letter.ruled-out {
+	background-color: rgb(255, 100, 88);
+}
+
 .guess-letter.pos-match {
 	background-color: rgb(106, 170, 100);
 }

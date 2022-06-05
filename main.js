@@ -195,7 +195,10 @@ function keyup(e) {
 					} else {
 						className = 'no-match';
 					}
+				} else if (isLetterRuledOut(ch, i)) {
+					className = 'ruled-out';
 				}
+				console.log(ch);
 				html += `<div class="guess-letter ${className}">${ch}</div>`;
 				i++;
 			}
@@ -370,4 +373,17 @@ function showGuessPossibilities(guessNum) {
 	}
 	wordPossibilitiesContainer.innerHTML = html;
 	showModal('possibilities');
+}
+
+function isLetterRuledOut(letter, pos) {
+	letter = letter.toLowerCase();
+	// console.log('letter', letter);
+	for (let i = 0; i < guesses.length - 1; i++) {
+		const guess = guesses[i].toLowerCase();
+		// console.log('guess', guess);
+		if (guess.includes(letter) && !word.includes(letter)) {
+			// console.log(true);
+			return true;
+		}
+	}
 }
