@@ -4752,4 +4752,5 @@ dict = [
 	'homey',
 	'robed',
 	'acrid',
+	'artsy',
 ];
