@@ -4750,4 +4750,6 @@ dict = [
 	'shush',
 	'annul',
 	'homey',
+	'robed',
+	'acrid',
 ];
