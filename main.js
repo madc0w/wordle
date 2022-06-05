@@ -198,7 +198,7 @@ function keyup(e) {
 				} else if (isLetterRuledOut(ch, i)) {
 					className = 'ruled-out';
 				}
-				console.log(ch);
+				// console.log(ch);
 				html += `<div class="guess-letter ${className}">${ch}</div>`;
 				i++;
 			}
