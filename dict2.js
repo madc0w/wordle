@@ -4755,4 +4755,6 @@ dict = [
 	'artsy',
 	'ghoul',
 	'pored',
+	'leper',
+	'meson',
 ];
