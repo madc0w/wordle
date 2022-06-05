@@ -4757,4 +4757,5 @@ dict = [
 	'pored',
 	'leper',
 	'meson',
+	'seedy',
 ];
