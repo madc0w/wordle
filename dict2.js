@@ -4753,5 +4753,6 @@ dict = [
 	'robed',
 	'acrid',
 	'artsy',
-	'ghoul' 
+	'ghoul',
+	'pored',
 ];
