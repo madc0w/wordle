@@ -384,6 +384,14 @@ function isLetterRuledOut(letter, pos) {
 		if (guess.includes(letter) && !word.includes(letter)) {
 			// console.log(true);
 			return true;
+		} else if (guess[pos] == word[pos] && letter != word[pos]) {
+			return true;
+		} else if (
+			letter == guess[pos] &&
+			word.includes(guess[pos]) &&
+			word.indexOf(letter) != pos
+		) {
+			return true;
 		}
 	}
 }
