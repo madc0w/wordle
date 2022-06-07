@@ -4760,4 +4760,6 @@ dict = [
 	'seedy',
 	'brawn',
 	'slake',
+	'ditty',
+	'fitch',
 ];
