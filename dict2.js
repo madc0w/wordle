@@ -4762,4 +4762,5 @@ dict = [
 	'slake',
 	'ditty',
 	'fitch',
+	'tithe',
 ];
