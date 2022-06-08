@@ -3046,7 +3046,6 @@ dict = [
 	'fears',
 	'feeds',
 	'feels',
-	'feets',
 	'ferns',
 	'files',
 	'fills',
