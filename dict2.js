@@ -4475,7 +4475,7 @@ dict = [
 	'winks',
 	'wipes',
 	'wires',
-	'wises',
+	// 'wises',
 	'wisps',
 	'wives',
 	'woods',
