@@ -4762,4 +4762,7 @@ dict = [
 	'ditty',
 	'fitch',
 	'tithe',
+	'wends',
+	'inane',
+	'snarl',
 ];
