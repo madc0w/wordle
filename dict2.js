@@ -4769,4 +4769,5 @@ dict = [
 	'dicey',
 	'moldy',
 	'amble',
+	'chump',
 ];
