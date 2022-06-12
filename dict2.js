@@ -4765,4 +4765,6 @@ dict = [
 	'wends',
 	'inane',
 	'snarl',
+	'dices',
+	'dicey',
 ];
