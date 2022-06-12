@@ -4767,4 +4767,6 @@ dict = [
 	'snarl',
 	'dices',
 	'dicey',
+	'moldy',
+	'amble',
 ];
