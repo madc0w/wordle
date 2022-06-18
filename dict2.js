@@ -4772,4 +4772,5 @@ dict = [
 	'chump',
 	'shorn',
 	'flout',
+	'showy',
 ];
