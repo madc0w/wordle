@@ -4773,4 +4773,5 @@ dict = [
 	'shorn',
 	'flout',
 	'showy',
+	'cased',
 ];
