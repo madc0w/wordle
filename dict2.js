@@ -4774,4 +4774,6 @@ dict = [
 	'flout',
 	'showy',
 	'cased',
+	'parch',
+	'sloop',
 ];
