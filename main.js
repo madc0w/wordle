@@ -235,6 +235,7 @@ function clearStats() {
 	delete localStorage.times;
 	delete localStorage.numGames;
 	delete localStorage.numWins;
+	delete localStorage.numLosses;
 	showStats();
 }
 
