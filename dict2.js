@@ -1900,7 +1900,7 @@ dict = [
 	'toxin',
 	'axiom',
 	'vents',
-	'mater',
+	// 'mater',
 	'humps',
 	'joker',
 	'hikes',
@@ -4776,4 +4776,5 @@ dict = [
 	'cased',
 	'parch',
 	'sloop',
+	'raged',
 ];
