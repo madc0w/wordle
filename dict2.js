@@ -4779,4 +4779,5 @@ dict = [
 	'raged',
 	'miser',
 	'mushy',
+	'chafe',
 ];
