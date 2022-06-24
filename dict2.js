@@ -4778,4 +4778,5 @@ dict = [
 	'sloop',
 	'raged',
 	'miser',
+	'mushy',
 ];
