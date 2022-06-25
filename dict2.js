@@ -2369,7 +2369,7 @@ dict = [
 	'bongo',
 	'shaky',
 	'bloke',
-	'cedex',
+	// 'cedex',
 	'necks',
 	'chews',
 	'phony',
