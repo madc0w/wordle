@@ -4780,4 +4780,5 @@ dict = [
 	'miser',
 	'mushy',
 	'chafe',
+	'agave'
 ];
