@@ -1678,7 +1678,6 @@ dict = [
 	'rents',
 	'cater',
 	'colts',
-	'putin',
 	'dunes',
 	'pinch',
 	'troll',
