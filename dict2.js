@@ -4784,4 +4784,5 @@ dict = [
 	'gaudy',
 	'berry',
 	'venal',
+	'offal',
 ];
