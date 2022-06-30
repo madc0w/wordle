@@ -4785,4 +4785,5 @@ dict = [
 	'berry',
 	'venal',
 	'offal',
+	'spork',
 ];
