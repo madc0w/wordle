@@ -4787,4 +4787,5 @@ dict = [
 	'spork',
 	'rinos',
 	'ergot',
+	'ingot',
 ];
