@@ -1721,7 +1721,6 @@ dict = [
 	'stout',
 	'stare',
 	'missy',
-	'meade',
 	'flair',
 	'aisle',
 	'limbs',
