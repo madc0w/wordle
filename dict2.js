@@ -4788,4 +4788,5 @@ dict = [
 	'rinos',
 	'ergot',
 	'ingot',
+	'spilt',
 ];
