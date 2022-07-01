@@ -4786,4 +4786,5 @@ dict = [
 	'venal',
 	'offal',
 	'spork',
+	'rinos',
 ];
