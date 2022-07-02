@@ -4789,4 +4789,5 @@ dict = [
 	'ergot',
 	'ingot',
 	'spilt',
+	'coped',
 ];
