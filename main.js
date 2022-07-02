@@ -18,6 +18,8 @@ const uniqueDict = [],
 const sounds = {
 	win: new Audio('sounds/win.mp3'),
 	lose: new Audio('sounds/lose.mp3'),
+	enter: new Audio('sounds/enter.mp3'),
+	notAWord: new Audio('sounds/bad-word.mp3'),
 };
 
 function onLoad() {
@@ -86,6 +88,8 @@ function keyup(e) {
 
 			if (guesses.length >= 6) {
 				isGameOver = true;
+			} else {
+				sounds.enter.play();
 			}
 
 			const isWin = currGuess.toLowerCase() == word;
@@ -167,6 +171,7 @@ function keyup(e) {
 			unusedLettersContainer.innerHTML = html;
 		} else {
 			isNotAWord = true;
+			sounds.notAWord.play();
 		}
 	} else if (e.key.match(/^[a-z]$/i) && currGuess.length < 5 && !isGameOver) {
 		guesses[guesses.length - 1] += e.key.toUpperCase();
