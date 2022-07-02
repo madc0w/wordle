@@ -14,6 +14,12 @@ let gameContainer,
 const uniqueDict = [],
 	guesses = [''],
 	guessPossibilities = [];
+
+const sounds = {
+	win: new Audio('sounds/win.mp3'),
+	lose: new Audio('sounds/lose.mp3'),
+};
+
 function onLoad() {
 	gameContainer = document.getElementById('game-container');
 	unusedLettersContainer = document.getElementById('unused-letters');
@@ -63,10 +69,7 @@ function keyup(e) {
 		currGuess.length > 0 &&
 		!isGameOver
 	) {
-		guesses[guesses.length - 1] = currGuess.substring(
-			0,
-			currGuess.length - 1
-		);
+		guesses[guesses.length - 1] = currGuess.substring(0, currGuess.length - 1);
 	} else if (e.key == 'Escape') {
 		closeModals();
 	} else if (e.key == 'Enter') {
@@ -88,9 +91,13 @@ function keyup(e) {
 			const isWin = currGuess.toLowerCase() == word;
 			if (isWin || isGameOver) {
 				clearInterval(clockTimerId);
-				resultTextContainer.innerHTML = isWin
-					? 'You win!'
-					: `You lose.<br/>Why didn't you try <span id="answer-word">${word}</span>?`;
+				if (isWin) {
+					sounds.win.play();
+					resultTextContainer.innerHTML = 'You win!';
+				} else {
+					sounds.lose.play();
+					resultTextContainer.innerHTML = `You lose.<br/>Why didn't you try <span id="answer-word">${word}</span>?`;
+				}
 				gameResultContainer.classList.remove('hidden');
 				const numWins = localStorage.numWins
 					? JSON.parse(localStorage.numWins)
@@ -145,10 +152,7 @@ function keyup(e) {
 			for (const guess of guesses) {
 				if (guessNum < guesses.length - 1) {
 					for (const ch of guess) {
-						unusedLetters = unusedLetters.replaceAll(
-							ch.toLowerCase(),
-							''
-						);
+						unusedLetters = unusedLetters.replaceAll(ch.toLowerCase(), '');
 					}
 				}
 				guessNum++;
@@ -170,11 +174,7 @@ function keyup(e) {
 
 	{
 		let html = '';
-		for (
-			let guessNum = 0;
-			guessNum < Math.min(guesses.length, 6);
-			guessNum++
-		) {
+		for (let guessNum = 0; guessNum < Math.min(guesses.length, 6); guessNum++) {
 			const guess = guesses[guessNum];
 			if (guess.toLowerCase() == word && e.key == 'Enter') {
 				isGameOver = true;
@@ -207,16 +207,13 @@ function keyup(e) {
 			}
 			if (guessPossibilities[guessNum]) {
 				const _isGameOver =
-					(currGuess.toLowerCase() == word && e.key == 'Enter') ||
-					isGameOver;
+					(currGuess.toLowerCase() == word && e.key == 'Enter') || isGameOver;
 				const onClick = _isGameOver
 					? `showGuessPossibilities(${guessNum})`
 					: '';
 				html += `<div class="guess-letter num-possibilities ${
 					_isGameOver ? 'game-over button modal-button' : ''
-				}" onClick="${onClick}" >${
-					guessPossibilities[guessNum].length
-				}</div>`;
+				}" onClick="${onClick}" >${guessPossibilities[guessNum].length}</div>`;
 			}
 			html += '</div>';
 		}
@@ -241,9 +238,7 @@ function clearStats() {
 
 function showStats() {
 	const times = localStorage.times ? JSON.parse(localStorage.times) : [];
-	const numWins = localStorage.numWins
-		? JSON.parse(localStorage.numWins)
-		: {};
+	const numWins = localStorage.numWins ? JSON.parse(localStorage.numWins) : {};
 	const numGames = localStorage.numGames
 		? JSON.parse(localStorage.numGames)
 		: 0;
