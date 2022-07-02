@@ -4790,4 +4790,5 @@ dict = [
 	'ingot',
 	'spilt',
 	'coped',
+	'ceded',
 ];
