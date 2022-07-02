@@ -4792,4 +4792,5 @@ dict = [
 	'coped',
 	'ceded',
 	'ebbed',
+	'splat',
 ];
