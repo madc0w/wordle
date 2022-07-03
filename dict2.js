@@ -4795,4 +4795,5 @@ dict = [
 	'splat',
 	'swoon',
 	'aught',
+	'purer',
 ];
