@@ -4797,4 +4797,5 @@ dict = [
 	'aught',
 	'purer',
 	'cocky',
+	'dopey',
 ];
