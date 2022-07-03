@@ -2593,7 +2593,7 @@ dict = [
 	'revel',
 	'madly',
 	'gripe',
-	'sider',
+	// 'sider',
 	'lowly',
 	'scant',
 	'elven',
