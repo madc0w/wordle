@@ -4794,4 +4794,5 @@ dict = [
 	'ebbed',
 	'splat',
 	'swoon',
+	'aught',
 ];
