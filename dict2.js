@@ -1254,7 +1254,7 @@ dict = [
 	'blown',
 	'baton',
 	'abbey',
-	'evite',
+	// 'evite',
 	'diets',
 	'sauna',
 	'bowls',
@@ -4798,4 +4798,5 @@ dict = [
 	'purer',
 	'cocky',
 	'dopey',
+	'tangy',
 ];
