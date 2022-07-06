@@ -2978,7 +2978,7 @@ dict = [
 	'debts',
 	'decks',
 	'deeds',
-	'deers',
+	// 'deers',
 	'delis',
 	'demos',
 	'dents',
