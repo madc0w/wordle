@@ -1436,7 +1436,7 @@ dict = [
 	'beard',
 	'wedge',
 	'ruins',
-	'denis',
+	// 'denis',
 	'hyper',
 	'cites',
 	'gamer',
