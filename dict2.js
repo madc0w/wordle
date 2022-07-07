@@ -4801,4 +4801,5 @@ dict = [
 	't.angy',
 	'chink',
 	'blare',
+	'slink',
 ];
