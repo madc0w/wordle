@@ -4798,6 +4798,7 @@ dict = [
 	'purer',
 	'cocky',
 	'dopey',
-	'tangy',
+	't.angy',
 	'chink',
+	'blare',
 ];
