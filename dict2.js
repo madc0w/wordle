@@ -4805,4 +4805,5 @@ dict = [
 	'waned',
 	'sitar',
 	'brigs',
+	'frier',
 ];
