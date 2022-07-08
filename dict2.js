@@ -4803,4 +4803,5 @@ dict = [
 	'blare',
 	'slink',
 	'waned',
+	'sitar',
 ];
