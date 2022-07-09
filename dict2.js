@@ -4806,4 +4806,5 @@ dict = [
 	'sitar',
 	'brigs',
 	'frier',
+	'muggy',
 ];
