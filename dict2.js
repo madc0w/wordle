@@ -4807,4 +4807,5 @@ dict = [
 	'brigs',
 	'frier',
 	'muggy',
+	'corny',
 ];
