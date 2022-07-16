@@ -4810,4 +4810,5 @@ dict = [
 	'corny',
 	'bidet',
 	'abhor',
+	'parry',
 ];
