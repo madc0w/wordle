@@ -4811,4 +4811,5 @@ dict = [
 	'bidet',
 	'abhor',
 	'parry',
+	'shrew',
 ];
