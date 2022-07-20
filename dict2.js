@@ -4813,4 +4813,5 @@ dict = [
 	'parry',
 	'shrew',
 	'aphid',
+	'mealy',
 ];
