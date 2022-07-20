@@ -2108,7 +2108,7 @@ dict = [
 	'lousy',
 	'caddy',
 	'brits',
-	'healy',
+	// 'healy',
 	'bleak',
 	'tramp',
 	'safes',
