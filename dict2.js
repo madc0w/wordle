@@ -4814,4 +4814,5 @@ dict = [
 	'shrew',
 	'aphid',
 	'mealy',
+	'biked',
 ];
