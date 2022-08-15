@@ -4817,4 +4817,5 @@ dict = [
 	'biked',
 	'wench',
 	'refit',
+	'suave',
 ];
