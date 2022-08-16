@@ -4819,4 +4819,5 @@ dict = [
 	'refit',
 	'suave',
 	'drawl',
+	'terse',
 ];
