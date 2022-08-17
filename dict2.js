@@ -4820,4 +4820,5 @@ dict = [
 	'suave',
 	'drawl',
 	'terse',
+	'shins',
 ];
