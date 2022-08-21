@@ -4822,4 +4822,6 @@ dict = [
 	'terse',
 	'shins',
 	'soapy',
+	'vouch',
+	'tippy',
 ];
