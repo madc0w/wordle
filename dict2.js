@@ -4825,4 +4825,5 @@ dict = [
 	'vouch',
 	'tippy',
 	'savor',
+	'spied',
 ];
