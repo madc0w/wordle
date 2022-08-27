@@ -4826,4 +4826,5 @@ dict = [
 	'tippy',
 	'savor',
 	'spied',
+	'udder',
 ];
