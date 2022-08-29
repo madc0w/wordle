@@ -4827,4 +4827,5 @@ dict = [
 	'savor',
 	'spied',
 	'udder',
+	'stoic',
 ];
