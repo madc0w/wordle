@@ -4831,4 +4831,5 @@ dict = [
 	'snuck',
 	'ashen',
 	'afoul',
+	'pried',
 ];
