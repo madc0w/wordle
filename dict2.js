@@ -4829,4 +4829,5 @@ dict = [
 	'udder',
 	'stoic',
 	'snuck',
+	'ashen',
 ];
