@@ -4798,7 +4798,7 @@ dict = [
 	'purer',
 	'cocky',
 	'dopey',
-	't.angy',
+	'tangy',
 	'chink',
 	'blare',
 	'slink',
@@ -4830,4 +4830,5 @@ dict = [
 	'stoic',
 	'snuck',
 	'ashen',
+	'afoul',
 ];
