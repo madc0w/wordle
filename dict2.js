@@ -4835,4 +4835,5 @@ dict = [
 	'chirp',
 	'ducal',
 	'gamed',
+	'nuked',
 ];
