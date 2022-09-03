@@ -4833,4 +4833,5 @@ dict = [
 	'afoul',
 	'pried',
 	'chirp',
+	'ducal',
 ];
