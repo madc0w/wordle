@@ -4836,4 +4836,5 @@ dict = [
 	'ducal',
 	'gamed',
 	'nuked',
+	'emery',
 ];
