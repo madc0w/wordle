@@ -23,6 +23,12 @@ body {
 	border-width: 2px;
 }
 
+.guess-letter.bad-guess {
+	background-image: radial-gradient(red, transparent 70%);
+	color: #222;
+}
+
+
 .guess-letter.num-possibilities {
 	font-size: 14px;
 	border-color: transparent;

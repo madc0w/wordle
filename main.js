@@ -14,6 +14,10 @@ let gameContainer,
 const uniqueDict = [],
 	guesses = [''],
 	guessPossibilities = [];
+const isGood = [];
+for (let i = 0; i < 6; i++) {
+	isGood.push(true);
+}
 
 const sounds = {
 	win: new Audio('sounds/win.mp3'),
@@ -137,7 +141,7 @@ function keyup(e) {
 				const n = possibilities.length;
 				possibilities.sort();
 				guessPossibilities.push(possibilities);
-				// console.log(numPossibilities);
+				// console.log('guessPossibilities', guess);
 				wordSpaceSizeContainer.innerHTML = `${n} ${
 					n == 1 ? 'possibility' : 'possibilities'
 				}`;
@@ -161,6 +165,21 @@ function keyup(e) {
 				}
 				guessNum++;
 			}
+
+			// console.log('currGuess', currGuess);
+			// console.log('guessNum', guessNum);
+
+			if (guessPossibilities.length > 1) {
+				isGood[guessPossibilities.length - 1] = guessPossibilities[
+					guessPossibilities.length - 2
+				].includes(currGuess.toLowerCase());
+				// console.log(
+				// 	'guessPossibilities',
+				// 	guessPossibilities[guessPossibilities.length - 2]
+				// );
+			}
+			console.log('is good?', isGood);
+
 			let html = '';
 			for (const ch of unusedLetters.toUpperCase()) {
 				const isVowel = 'AEIOUY'.includes(ch);
@@ -217,6 +236,8 @@ function keyup(e) {
 					? `showGuessPossibilities(${guessNum})`
 					: '';
 				html += `<div class="guess-letter num-possibilities ${
+					isGood[guessNum] ? '' : 'bad-guess'
+				} ${
 					_isGameOver ? 'game-over button modal-button' : ''
 				}" onClick="${onClick}" >${guessPossibilities[guessNum].length}</div>`;
 			}
