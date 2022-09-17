@@ -4840,4 +4840,5 @@ dict = [
 	'mused',
 	'burly',
 	'yokel',
+	'welts',
 ];
