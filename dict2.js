@@ -4841,4 +4841,5 @@ dict = [
 	'burly',
 	'yokel',
 	'welts',
+	'baste',
 ];
