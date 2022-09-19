@@ -4842,4 +4842,5 @@ dict = [
 	'yokel',
 	'welts',
 	'baste',
+	'apace',
 ];
