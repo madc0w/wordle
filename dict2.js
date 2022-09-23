@@ -4845,4 +4845,5 @@ dict = [
 	'apace',
 	'gulag',
 	'preen',
+	'dorky',
 ];
