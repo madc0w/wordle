@@ -4844,4 +4844,5 @@ dict = [
 	'baste',
 	'apace',
 	'gulag',
+	'preen',
 ];
