@@ -4848,4 +4848,5 @@ dict = [
 	'dorky',
 	'pushy',
 	'sheaf',
+	'dozed',
 ];
