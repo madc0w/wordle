@@ -4854,4 +4854,5 @@ dict = [
 	'lurid',
 	'amuck',
 	'doggy',
+	'dowdy',
 ];
