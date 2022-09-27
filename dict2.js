@@ -4852,4 +4852,5 @@ dict = [
 	'aspic',
 	'smite',
 	'lurid',
+	'amuck',
 ];
