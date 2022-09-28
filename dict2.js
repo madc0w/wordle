@@ -4855,4 +4855,5 @@ dict = [
 	'amuck',
 	'doggy',
 	'dowdy',
+	'dosed',
 ];
