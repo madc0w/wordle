@@ -4859,4 +4859,5 @@ dict = [
 	'gouge',
 	'kneed',
 	'soggy',
+	'sorer',
 ];
