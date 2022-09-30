@@ -4861,4 +4861,5 @@ dict = [
 	'soggy',
 	'sorer',
 	'surer',
+	'froth',
 ];
