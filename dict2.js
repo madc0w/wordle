@@ -4864,4 +4864,5 @@ dict = [
 	'froth',
 	'edict',
 	'evict',
+	'crone',
 ];
