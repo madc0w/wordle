@@ -4862,4 +4862,5 @@ dict = [
 	'sorer',
 	'surer',
 	'froth',
+	'edict',
 ];
