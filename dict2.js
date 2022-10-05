@@ -1271,7 +1271,7 @@ dict = [
 	'fairs',
 	'flute',
 	'harsh',
-	'whois',
+	// 'whois',
 	'cease',
 	'poles',
 	'equip',
