@@ -4866,4 +4866,5 @@ dict = [
 	'evict',
 	'crone',
 	'jaunt',
+	'wring',
 ];
