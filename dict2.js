@@ -4868,4 +4868,5 @@ dict = [
 	'jaunt',
 	'wring',
 	'surly',
+	'ardor',
 ];
