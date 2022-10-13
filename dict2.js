@@ -4867,4 +4867,5 @@ dict = [
 	'crone',
 	'jaunt',
 	'wring',
+	'surly',
 ];
