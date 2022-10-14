@@ -4869,4 +4869,5 @@ dict = [
 	'wring',
 	'surly',
 	'ardor',
+	'stilt',
 ];
