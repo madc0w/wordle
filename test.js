@@ -31,7 +31,8 @@ for (const guess of uniqueDict) {
 	const eta = new Date(startTime.getTime() + totalTime);
 	// console.log(`${(100 * finishedRatio).toFixed(2)}% finished. ETA: ${eta}`);
 	// console.log();
-	console.log(`${guess},${mean},${max},${eta}`);
+	console.error('ETA', eta.toISOString());
+	console.log(`${guess},${mean},${max}`);
 }
 
 function guessMatchesWord(guess, dictWord, word) {
