@@ -4874,4 +4874,5 @@ dict = [
 	'rowed',
 	'jumpy',
 	'wimpy',
+	'slews',
 ];
