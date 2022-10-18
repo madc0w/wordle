@@ -4879,4 +4879,5 @@ dict = [
 	'whelp',
 	'cower',
 	'livid',
+	'riper',
 ];
