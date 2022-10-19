@@ -506,7 +506,7 @@ dict = [
 	'catch',
 	'doubt',
 	'tasks',
-	'const',
+	// 'const',
 	'doors',
 	'forth',
 	'split',
