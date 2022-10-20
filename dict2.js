@@ -2085,7 +2085,7 @@ dict = [
 	'gusts',
 	'hippo',
 	'dudes',
-	'overs',
+	// 'overs',
 	'nests',
 	'plead',
 	'sheen',
