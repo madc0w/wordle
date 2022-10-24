@@ -4880,4 +4880,6 @@ dict = [
 	'cower',
 	'livid',
 	'riper',
+	'vexed',
+	'vexes',
 ];
