@@ -4882,4 +4882,6 @@ dict = [
 	'riper',
 	'vexed',
 	'vexes',
+	'hexed',
+	'hexes',
 ];
