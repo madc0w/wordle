@@ -4884,4 +4884,5 @@ dict = [
 	'vexes',
 	'hexed',
 	'hexes',
+	'lurch',
 ];
