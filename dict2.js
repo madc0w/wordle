@@ -3435,7 +3435,7 @@ dict = [
 	'reins',
 	'rents',
 	'rests',
-	'retes',
+	// 'retes',
 	'rings',
 	'rinks',
 	'riots',
