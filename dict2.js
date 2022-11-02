@@ -4886,4 +4886,5 @@ dict = [
 	'hexes',
 	'lurch',
 	'cluck',
+	'shard',
 ];
