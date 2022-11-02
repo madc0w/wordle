@@ -4885,4 +4885,5 @@ dict = [
 	'hexed',
 	'hexes',
 	'lurch',
+	'cluck',
 ];
