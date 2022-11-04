@@ -4887,4 +4887,5 @@ dict = [
 	'lurch',
 	'cluck',
 	'shard',
+	'pends',
 ];
