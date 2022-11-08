@@ -1840,7 +1840,7 @@ dict = [
 	'fined',
 	'apron',
 	'aides',
-	'corba',
+	// 'corba',
 	'yummy',
 	'sexes',
 	'husky',
