@@ -4888,4 +4888,5 @@ dict = [
 	'shard',
 	'pends',
 	'flail',
+	'gavel',
 ];
