@@ -2176,7 +2176,6 @@ dict = [
 	'karat',
 	'tolls',
 	'magma',
-	'kunst',
 	'arson',
 	'geeky',
 	'haunt',
