@@ -4890,4 +4890,5 @@ dict = [
 	'flail',
 	'gavel',
 	'clung',
+	'papas',
 ];
