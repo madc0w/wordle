@@ -4892,4 +4892,5 @@ dict = [
 	'clung',
 	'papas',
 	'rower',
+	'daffy',
 ];
