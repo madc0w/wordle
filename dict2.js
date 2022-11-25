@@ -4895,4 +4895,6 @@ dict = [
 	'daffy',
 	'gruel',
 	'scold',
+	'raved',
+	'razed',
 ];
