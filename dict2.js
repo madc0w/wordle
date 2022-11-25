@@ -4894,4 +4894,5 @@ dict = [
 	'rower',
 	'daffy',
 	'gruel',
+	'scold',
 ];
