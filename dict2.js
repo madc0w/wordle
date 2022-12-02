@@ -4897,4 +4897,5 @@ dict = [
 	'scold',
 	'raved',
 	'razed',
+	'opine',
 ];
