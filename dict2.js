@@ -4898,4 +4898,5 @@ dict = [
 	'raved',
 	'razed',
 	'opine',
+	'vapid',
 ];
