@@ -4900,4 +4900,5 @@ dict = [
 	'opine',
 	'vapid',
 	'bodes',
+	'slims',
 ];
