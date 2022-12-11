@@ -4902,4 +4902,5 @@ dict = [
 	'bodes',
 	'slims',
 	'caved',
+	'gonad',
 ];
