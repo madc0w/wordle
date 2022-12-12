@@ -4904,4 +4904,5 @@ dict = [
 	'caved',
 	'gonad',
 	'aloof',
+	'coven',
 ];
