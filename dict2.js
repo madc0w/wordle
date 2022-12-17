@@ -4906,4 +4906,5 @@ dict = [
 	'aloof',
 	'coven',
 	'afoot',
+	'hazed',
 ];
