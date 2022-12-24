@@ -4907,4 +4907,5 @@ dict = [
 	'coven',
 	'afoot',
 	'hazed',
+	'conch',
 ];
