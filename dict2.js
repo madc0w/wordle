@@ -4908,4 +4908,5 @@ dict = [
 	'afoot',
 	'hazed',
 	'conch',
+	'slung',
 ];
