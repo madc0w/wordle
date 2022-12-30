@@ -4910,4 +4910,5 @@ dict = [
 	'conch',
 	'slung',
 	'ruddy',
+	'stoat',
 ];
