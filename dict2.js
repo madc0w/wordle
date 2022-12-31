@@ -4911,4 +4911,5 @@ dict = [
 	'slung',
 	'ruddy',
 	'stoat',
+	'mange',
 ];
