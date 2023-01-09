@@ -4914,4 +4914,5 @@ dict = [
 	'mange',
 	'stank',
 	'frock',
+	'strew',
 ];
