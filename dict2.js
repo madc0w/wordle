@@ -4917,4 +4917,5 @@ dict = [
 	'strew',
 	'vaunt',
 	'yoked',
+	'spurt',
 ];
