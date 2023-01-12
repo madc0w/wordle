@@ -4916,4 +4916,5 @@ dict = [
 	'frock',
 	'strew',
 	'vaunt',
+	'yoked',
 ];
