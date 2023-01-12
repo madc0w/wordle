@@ -4918,4 +4918,5 @@ dict = [
 	'vaunt',
 	'yoked',
 	'spurt',
+	'dirge',
 ];
