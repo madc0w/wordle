@@ -4921,4 +4921,5 @@ dict = [
 	'dirge',
 	'shuck',
 	'squib',
+	'awash',
 ];
