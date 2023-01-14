@@ -4922,4 +4922,5 @@ dict = [
 	'shuck',
 	'squib',
 	'awash',
+	'wryly',
 ];
