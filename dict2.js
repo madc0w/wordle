@@ -4923,4 +4923,5 @@ dict = [
 	'squib',
 	'awash',
 	'wryly',
+	'qualm',
 ];

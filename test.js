@@ -6,7 +6,7 @@ for (const dictWord of dict) {
 		uniqueDict.push(dictWord);
 	}
 }
-console.log('guess,mean,max,eta');
+console.log('guess,mean,max');
 
 const startTime = new Date();
 let i = 0;
