@@ -4924,4 +4924,5 @@ dict = [
 	'awash',
 	'wryly',
 	'qualm',
+	'waxen',
 ];
