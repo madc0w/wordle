@@ -4927,4 +4927,5 @@ dict = [
 	'waxen',
 	'testy',
 	'gnash',
+	'quash',
 ];
