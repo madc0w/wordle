@@ -4926,4 +4926,5 @@ dict = [
 	'qualm',
 	'waxen',
 	'testy',
+	'gnash',
 ];
