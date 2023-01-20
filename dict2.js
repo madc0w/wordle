@@ -4928,4 +4928,6 @@ dict = [
 	'testy',
 	'gnash',
 	'quash',
+	'gaped',
+	'quaff',
 ];
