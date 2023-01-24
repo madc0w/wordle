@@ -4931,4 +4931,5 @@ dict = [
 	'gaped',
 	'quaff',
 	'loath',
+	'hunch',
 ];
