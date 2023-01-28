@@ -4932,4 +4932,5 @@ dict = [
 	'quaff',
 	'loath',
 	'hunch',
+	'paean',
 ];
