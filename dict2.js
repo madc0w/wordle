@@ -4933,4 +4933,6 @@ dict = [
 	'loath',
 	'hunch',
 	'paean',
+	'smelt',
+	'nadir',
 ];
