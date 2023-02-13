@@ -4935,4 +4935,5 @@ dict = [
 	'smelt',
 	'nadir',
 	'ailed',
+	'throb',
 ];
