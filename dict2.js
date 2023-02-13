@@ -2321,7 +2321,6 @@ dict = [
 	'scamp',
 	'cysts',
 	'helms',
-	'wierd',
 	'moths',
 	'evoke',
 	'foxes',
@@ -4935,4 +4934,5 @@ dict = [
 	'paean',
 	'smelt',
 	'nadir',
+	'ailed',
 ];
