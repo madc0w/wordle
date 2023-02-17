@@ -4936,4 +4936,5 @@ dict = [
 	'nadir',
 	'ailed',
 	'throb',
+	'hovel',
 ];
