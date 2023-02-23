@@ -4937,4 +4937,5 @@ dict = [
 	'ailed',
 	'throb',
 	'hovel',
+	'poise',
 ];
