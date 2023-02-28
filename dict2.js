@@ -4939,4 +4939,5 @@ dict = [
 	'hovel',
 	'poise',
 	'heave',
+	'macaw',
 ];
