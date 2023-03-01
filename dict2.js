@@ -4940,4 +4940,5 @@ dict = [
 	'poise',
 	'heave',
 	'macaw',
+	'chive',
 ];
