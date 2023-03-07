@@ -4783,7 +4783,7 @@ dict = [
 	'venal',
 	'offal',
 	'spork',
-	'rinos',
+	// 'rinos',
 	'ergot',
 	'ingot',
 	'spilt',
