@@ -1776,7 +1776,7 @@ dict = [
 	'latch',
 	'verbs',
 	'drank',
-	'santo',
+	// 'santo',
 	'torso',
 	'grabs',
 	'wards',
