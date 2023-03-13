@@ -1136,7 +1136,7 @@ dict = [
 	'daisy',
 	'crude',
 	'bored',
-	'allah',
+	// 'allah',
 	'fares',
 	'hoped',
 	'safer',
