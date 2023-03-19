@@ -4942,4 +4942,5 @@ dict = [
 	'macaw',
 	'chive',
 	'amass',
+	'sedge',
 ];
