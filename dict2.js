@@ -4944,4 +4944,5 @@ dict = [
 	'amass',
 	'sedge',
 	'yearn',
+	'plies',
 ];
