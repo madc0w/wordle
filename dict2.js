@@ -4946,4 +4946,5 @@ dict = [
 	'yearn',
 	'plies',
 	'radii',
+	'beset',
 ];
