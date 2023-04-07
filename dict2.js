@@ -4947,4 +4947,5 @@ dict = [
 	'plies',
 	'radii',
 	'beset',
+	'coots',
 ];
