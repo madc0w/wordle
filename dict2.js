@@ -4950,4 +4950,6 @@ dict = [
 	'coots',
 	'louts',
 	'tinge',
+	'wispy',
+	'whisp',
 ];
