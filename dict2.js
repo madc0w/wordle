@@ -4949,4 +4949,5 @@ dict = [
 	'beset',
 	'coots',
 	'louts',
+	'tinge',
 ];
