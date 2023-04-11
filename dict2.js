@@ -4952,4 +4952,5 @@ dict = [
 	'tinge',
 	'wispy',
 	'whisp',
+	'pooka',
 ];
