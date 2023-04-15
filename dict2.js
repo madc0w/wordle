@@ -4953,4 +4953,5 @@ dict = [
 	'wispy',
 	'whisp',
 	'pooka',
+	'halve',
 ];
