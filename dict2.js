@@ -4956,4 +4956,5 @@ dict = [
 	'halve',
 	'peppy',
 	'sawed',
+	'buxom',
 ];
