@@ -4953,4 +4953,5 @@ dict = [
 	'sawed',
 	'buxom',
 	'idled',
+	'amiss',
 ];
