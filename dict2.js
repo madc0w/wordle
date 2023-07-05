@@ -4954,4 +4954,5 @@ dict = [
 	'buxom',
 	'idled',
 	'amiss',
+	'furor',
 ];
