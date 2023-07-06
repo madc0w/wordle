@@ -4956,4 +4956,5 @@ dict = [
 	'amiss',
 	'furor',
 	'obeys',
+	'unwed',
 ];
