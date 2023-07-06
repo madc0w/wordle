@@ -4955,4 +4955,5 @@ dict = [
 	'idled',
 	'amiss',
 	'furor',
+	'obeys',
 ];
