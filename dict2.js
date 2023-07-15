@@ -4957,4 +4957,5 @@ dict = [
 	'furor',
 	'obeys',
 	'unwed',
+	'pence',
 ];
