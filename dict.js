@@ -764,7 +764,6 @@ const dict = [
 	'crush',
 	'crust',
 	'crypt',
-
 	'cubby',
 	'cubeb',
 	'cubic',
@@ -4488,7 +4487,6 @@ const dict = [
 	'gears',
 	'gents',
 	'germs',
-	'gests',
 	'gibes',
 	'gifts',
 	'gills',

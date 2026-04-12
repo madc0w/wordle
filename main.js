@@ -41,7 +41,12 @@ function onLoad() {
 			uniqueDict.push(dictWord);
 		}
 	}
-	wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} possibilities`;
+
+	if (uniqueDict.length == 1) {
+		wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} word possible`;
+	} else {
+		wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} words possible`;
+	}
 
 	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
 	// word = uniqueDict[0];
@@ -151,7 +156,7 @@ function keyup(e) {
 				guessPossibilities.push(possibilities);
 				// console.log('guessPossibilities', guess);
 				wordSpaceSizeContainer.innerHTML = `${n} ${
-					n == 1 ? 'possibility' : 'possibilities'
+					n == 1 ? 'word possible' : 'words possible'
 				}`;
 			}
 			guesses.push('');
