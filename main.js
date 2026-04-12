@@ -120,6 +120,7 @@ function keyup(e) {
 					resultTextContainer.innerHTML = `You lose.<br/>Why didn't you try <span id="answer-word">${word}</span>?`;
 				}
 				gameResultContainer.classList.remove('hidden');
+				document.getElementById('keyboard').style.display = 'none';
 				const numWins = localStorage.numWins
 					? JSON.parse(localStorage.numWins)
 					: {};
