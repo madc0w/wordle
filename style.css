@@ -247,11 +247,18 @@ body {
 
 /* On-screen keyboard */
 #keyboard {
+	display: none;
 	margin: 8px auto;
 	max-width: 500px;
 	text-align: center;
 	user-select: none;
 	-webkit-user-select: none;
+}
+
+@media (pointer: coarse) {
+	#keyboard {
+		display: block;
+	}
 }
 
 .kb-row {
