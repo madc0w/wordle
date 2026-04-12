@@ -1,14 +1,19 @@
 body {
 	font-family: Lato;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
 }
 
 #game-container {
-	width: 492px;
+	width: calc(100% - 36px);
+	max-width: 492px;
 	min-height: 80px;
 	background-color: bisque;
 	border-radius: 8px;
 	margin: 18px;
 	box-shadow: 4px 4px 8px 2px #888;
+	box-sizing: border-box;
 }
 
 .guess-letter {
@@ -21,6 +26,7 @@ body {
 	border-style: solid;
 	border-color: black;
 	border-width: 2px;
+	box-sizing: border-box;
 }
 
 .guess-letter.bad-guess {
@@ -71,11 +77,12 @@ body {
 #game-result {
 	margin-top: 12px;
 	margin-left: 22px;
-	width: 400px;
+	width: calc(100% - 44px);
+	max-width: 400px;
 }
 
 #game-result .button {
-	margin-left: 130px;
+	margin: 0 auto;
 	width: 120px;
 }
 
@@ -94,7 +101,8 @@ body {
 #header {
 	margin: 22px;
 	font-size: 36px;
-	width: 400px;
+	width: calc(100% - 44px);
+	max-width: 400px;
 	color: #44993d;
 }
 
@@ -222,9 +230,11 @@ body {
 .modal {
 	position: absolute;
 	top: 10%;
-	left: calc(50% - 150px);
+	left: 50%;
+	transform: translateX(-50%);
 	height: 400px;
-	width: 300px;
+	width: calc(100% - 40px);
+	max-width: 300px;
 	border-radius: 8px;
 	border-style: solid;
 	border-width: 2px;
@@ -232,4 +242,91 @@ body {
 	padding: 8px;
 	background-color: #fff;
 	box-shadow: 0px 0px 20px 20px #444;
+	box-sizing: border-box;
+}
+
+/* On-screen keyboard */
+#keyboard {
+	margin: 8px auto;
+	max-width: 500px;
+	text-align: center;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.kb-row {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 4px;
+}
+
+.kb-key {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 48px;
+	margin: 2px;
+	border-radius: 6px;
+	background-color: #d3d6da;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+}
+
+.kb-key:active {
+	background-color: #aaa;
+}
+
+.kb-key.kb-wide {
+	width: 56px;
+	font-size: 12px;
+}
+
+/* Mobile responsive */
+@media (max-width: 520px) {
+	.guess-letter {
+		width: calc((100vw - 36px - 80px) / 5);
+		font-size: clamp(22px, 7vw, 42px);
+		margin: 4px;
+	}
+
+	.guess-letter.num-possibilities {
+		width: 32px;
+		font-size: 14px;
+	}
+
+	#unused-letters .guess-letter {
+		width: auto;
+		padding: 0 4px;
+		font-size: 18px;
+		margin: 3px;
+	}
+
+	#header {
+		font-size: 28px;
+		margin: 12px;
+	}
+
+	#game-container {
+		margin: 12px;
+		width: calc(100% - 24px);
+	}
+
+	#game-result {
+		margin-left: 12px;
+		width: calc(100% - 24px);
+	}
+
+	.kb-key {
+		width: 30px;
+		height: 44px;
+		font-size: 14px;
+	}
+
+	.kb-key.kb-wide {
+		width: 48px;
+		font-size: 11px;
+	}
 }

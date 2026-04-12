@@ -48,6 +48,17 @@ function onLoad() {
 	// console.log(word);
 
 	document.addEventListener('keyup', keyup);
+	document.querySelectorAll('.kb-key').forEach((key) => {
+		key.addEventListener('click', (e) => {
+			e.stopPropagation();
+			keyup({
+				key:
+					key.dataset.key.length === 1
+						? key.dataset.key.toLowerCase()
+						: key.dataset.key,
+			});
+		});
+	});
 	document.addEventListener('click', (e) => {
 		// console.log(e);
 		let isModalInPath;

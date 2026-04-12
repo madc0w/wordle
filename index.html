@@ -1,5 +1,9 @@
 <html>
 	<head>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no"
+		/>
 		<title>Wurdle</title>
 		<link rel="icon" type="image/x-icon" href="img/favicon.png" />
 		<script type="text/javascript" src="dict2.js"></script>
@@ -25,6 +29,42 @@
 		</div>
 		<div id="game-container"></div>
 		<div id="unused-letters"></div>
+		<div id="keyboard">
+			<div class="kb-row">
+				<div class="kb-key" data-key="Q">Q</div>
+				<div class="kb-key" data-key="W">W</div>
+				<div class="kb-key" data-key="E">E</div>
+				<div class="kb-key" data-key="R">R</div>
+				<div class="kb-key" data-key="T">T</div>
+				<div class="kb-key" data-key="Y">Y</div>
+				<div class="kb-key" data-key="U">U</div>
+				<div class="kb-key" data-key="I">I</div>
+				<div class="kb-key" data-key="O">O</div>
+				<div class="kb-key" data-key="P">P</div>
+			</div>
+			<div class="kb-row">
+				<div class="kb-key" data-key="A">A</div>
+				<div class="kb-key" data-key="S">S</div>
+				<div class="kb-key" data-key="D">D</div>
+				<div class="kb-key" data-key="F">F</div>
+				<div class="kb-key" data-key="G">G</div>
+				<div class="kb-key" data-key="H">H</div>
+				<div class="kb-key" data-key="J">J</div>
+				<div class="kb-key" data-key="K">K</div>
+				<div class="kb-key" data-key="L">L</div>
+			</div>
+			<div class="kb-row">
+				<div class="kb-key kb-wide" data-key="Enter">ENTER</div>
+				<div class="kb-key" data-key="Z">Z</div>
+				<div class="kb-key" data-key="X">X</div>
+				<div class="kb-key" data-key="C">C</div>
+				<div class="kb-key" data-key="V">V</div>
+				<div class="kb-key" data-key="B">B</div>
+				<div class="kb-key" data-key="N">N</div>
+				<div class="kb-key" data-key="M">M</div>
+				<div class="kb-key kb-wide" data-key="Backspace">&#9003;</div>
+			</div>
+		</div>
 		<div id="game-result" class="hidden">
 			<div id="result-text"></div>
 			<div class="button" onClick="location.href = location.href">
