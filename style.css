@@ -40,10 +40,11 @@ body {
 .guess-letter.num-possibilities {
 	font-size: 20px;
 	border-color: transparent;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding: 4px 6px;
 	vertical-align: top;
-	width: 42px;
+	min-width: 42px;
+	width: auto;
+	box-sizing: border-box;
 }
 
 .guess-letter.vowel {
@@ -300,7 +301,8 @@ body {
 	}
 
 	.guess-letter.num-possibilities {
-		width: 32px;
+		min-width: 32px;
+		width: auto;
 		font-size: 14px;
 	}
 
