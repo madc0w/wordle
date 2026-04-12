@@ -20,13 +20,13 @@ body {
 	display: flex;
 	align-items: center;
 	position: relative;
-	margin-right: 50px;
+	margin-right: 60px;
 }
 
 .guess-letter {
 	display: inline-block;
 	flex: 1 1 0;
-	min-width: 0;
+	min-width: 60px;
 	font-size: 42px;
 	margin: 8px;
 	text-align: center;
@@ -47,10 +47,10 @@ body {
 
 .guess-letter.num-possibilities {
 	position: absolute;
-	right: -50px;
+	right: -66px;
 	font-size: 20px;
 	border-color: transparent;
-	padding: 4px 6px;
+	padding: 4px 6px 4px 12px;
 	min-width: 42px;
 	width: auto;
 	box-sizing: border-box;
@@ -261,6 +261,11 @@ body {
 	z-index: 10;
 }
 
+#unused-letters {
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
 /* On-screen keyboard */
 #keyboard {
 	display: none;
@@ -275,6 +280,14 @@ body {
 	#keyboard {
 		display: block;
 	}
+	#unused-letters {
+		display: none;
+	}
+}
+
+.kb-key.kb-eliminated {
+	background-color: #c44;
+	color: #fff;
 }
 
 .kb-row {

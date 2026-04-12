@@ -161,24 +161,6 @@ function keyup(e) {
 			}
 			guesses.push('');
 
-			let unusedLetters = '';
-			for (
-				let ch = 'a';
-				ch <= 'z';
-				ch = String.fromCharCode(ch.charCodeAt() + 1)
-			) {
-				unusedLetters += ch;
-			}
-			let guessNum = 0;
-			for (const guess of guesses) {
-				if (guessNum < guesses.length - 1) {
-					for (const ch of guess) {
-						unusedLetters = unusedLetters.replaceAll(ch.toLowerCase(), '');
-					}
-				}
-				guessNum++;
-			}
-
 			// console.log('currGuess', currGuess);
 			// console.log('guessNum', guessNum);
 
@@ -191,16 +173,41 @@ function keyup(e) {
 				// 	guessPossibilities[guessPossibilities.length - 2]
 				// );
 			}
-			// console.log('is good?', isGood);
+			// Build set of impossible letters (confirmed not in the word)
+			const impossibleLetters = new Set();
+			for (let gi = 0; gi < guesses.length - 1; gi++) {
+				for (const ch of guesses[gi]) {
+					if (!word.includes(ch.toLowerCase())) {
+						impossibleLetters.add(ch.toUpperCase());
+					}
+				}
+			}
 
 			let html = '';
-			for (const ch of unusedLetters.toUpperCase()) {
+			for (
+				let ch = 'A';
+				ch <= 'Z';
+				ch = String.fromCharCode(ch.charCodeAt() + 1)
+			) {
+				if (impossibleLetters.has(ch)) continue;
 				const isVowel = 'AEIOUY'.includes(ch);
 				html += `<div class="guess-letter ${
 					isVowel ? 'vowel' : ''
 				}">${ch}</div>`;
 			}
 			unusedLettersContainer.innerHTML = html;
+
+			// Mark impossible letters on keyboard
+			document.querySelectorAll('.kb-key').forEach((key) => {
+				const k = key.dataset.key;
+				if (k && k.length === 1) {
+					if (impossibleLetters.has(k.toUpperCase())) {
+						key.classList.add('kb-eliminated');
+					} else {
+						key.classList.remove('kb-eliminated');
+					}
+				}
+			});
 		} else {
 			isNotAWord = true;
 			sounds.notAWord.play();
