@@ -25,12 +25,14 @@ body {
 
 .guess-letter.bad-guess {
 	background-image: radial-gradient(red, transparent 70%);
-	color: #222;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
 
 
 .guess-letter.num-possibilities {
-	font-size: 14px;
+	font-size: 20px;
 	border-color: transparent;
 	padding-top: 4px;
 	padding-bottom: 4px;

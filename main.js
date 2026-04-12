@@ -65,6 +65,10 @@ function onLoad() {
 }
 
 function keyup(e) {
+	if (e.key == 'Escape') {
+		closeModals();
+		return;
+	}
 	if (isGameOver) {
 		return;
 	}
@@ -76,8 +80,6 @@ function keyup(e) {
 		!isGameOver
 	) {
 		guesses[guesses.length - 1] = currGuess.substring(0, currGuess.length - 1);
-	} else if (e.key == 'Escape') {
-		closeModals();
 	} else if (e.key == 'Enter') {
 		if (uniqueDict.includes(currGuess.toLowerCase())) {
 			if (guesses.length == 1) {
@@ -279,12 +281,12 @@ function showStats() {
 		html += '<div id="times">';
 		html += '<div class="row">';
 		html += `<div class="label">Best time:</div><div class="time-value">${formatTime(
-			minTime
+			minTime,
 		)}</div>`;
 		html += '</div>';
 		html += '<div class="row">';
 		html += `<div class="label">Avg. time:</div><div class="time-value">${formatTime(
-			meanTime
+			meanTime,
 		)}</div>`;
 		html += '</div>';
 		html += '</div>';
