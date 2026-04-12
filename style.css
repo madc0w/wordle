@@ -16,9 +16,17 @@ body {
 	box-sizing: border-box;
 }
 
+.guess {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-right: 50px;
+}
+
 .guess-letter {
 	display: inline-block;
-	width: 60px;
+	flex: 1 1 0;
+	min-width: 0;
 	font-size: 42px;
 	margin: 8px;
 	text-align: center;
@@ -38,10 +46,11 @@ body {
 
 
 .guess-letter.num-possibilities {
+	position: absolute;
+	right: -50px;
 	font-size: 20px;
 	border-color: transparent;
 	padding: 4px 6px;
-	vertical-align: top;
 	min-width: 42px;
 	width: auto;
 	box-sizing: border-box;
@@ -158,9 +167,7 @@ body {
 }
 
 #stats-modal .button {
-	position: absolute;
-	top: 356px;
-	left: 22px;
+	margin: 12px auto 0;
 	width: 80%;
 }
 
@@ -172,6 +179,12 @@ body {
 
 #game-stats {
 	margin: 8px;
+	width: calc(100% - 16px);
+	table-layout: fixed;
+}
+
+#game-stats td:first-child {
+	width: 20px;
 }
 
 .num-wins-bar {
@@ -183,6 +196,8 @@ body {
 	border-width: 1px;
 	border-color: #222;
 	border-style: solid;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 
 #times {
@@ -233,7 +248,6 @@ body {
 	top: 10%;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 400px;
 	width: calc(100% - 40px);
 	max-width: 300px;
 	border-radius: 8px;
@@ -244,6 +258,7 @@ body {
 	background-color: #fff;
 	box-shadow: 0px 0px 20px 20px #444;
 	box-sizing: border-box;
+	z-index: 10;
 }
 
 /* On-screen keyboard */
@@ -294,33 +309,39 @@ body {
 
 /* Mobile responsive */
 @media (max-width: 520px) {
+	#header {
+		font-size: 28px;
+		margin: 12px;
+		width: calc(100% - 24px);
+		overflow: hidden;
+	}
+
+	#word-space-size {
+		width: auto;
+	}
+
 	.guess-letter {
-		width: calc((100vw - 36px - 80px) / 5);
 		font-size: clamp(22px, 7vw, 42px);
 		margin: 4px;
 	}
 
 	.guess-letter.num-possibilities {
 		min-width: 32px;
-		width: auto;
 		font-size: 14px;
 	}
 
 	#unused-letters .guess-letter {
+		flex: none;
 		width: auto;
 		padding: 0 4px;
 		font-size: 18px;
 		margin: 3px;
 	}
 
-	#header {
-		font-size: 28px;
-		margin: 12px;
-	}
-
 	#game-container {
 		margin: 12px;
 		width: calc(100% - 24px);
+		padding: 4px;
 	}
 
 	#game-result {

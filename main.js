@@ -60,15 +60,10 @@ function onLoad() {
 		});
 	});
 	document.addEventListener('click', (e) => {
-		// console.log(e);
-		let isModalInPath;
-		for (const el of e.path) {
-			if (el.className && el.classList.contains('modal')) {
-				isModalInPath = true;
-				break;
-			}
-		}
-		if (!e.target.classList.contains('modal-button') && !isModalInPath) {
+		if (
+			!e.target.classList.contains('modal-button') &&
+			!e.target.closest('.modal')
+		) {
 			closeModals();
 		}
 	});
@@ -191,7 +186,7 @@ function keyup(e) {
 				// 	guessPossibilities[guessPossibilities.length - 2]
 				// );
 			}
-			console.log('is good?', isGood);
+			// console.log('is good?', isGood);
 
 			let html = '';
 			for (const ch of unusedLetters.toUpperCase()) {
@@ -268,10 +263,10 @@ function keyup(e) {
 }
 
 function clearStats() {
-	delete localStorage.times;
-	delete localStorage.numGames;
-	delete localStorage.numWins;
-	delete localStorage.numLosses;
+	localStorage.removeItem('times');
+	localStorage.removeItem('numGames');
+	localStorage.removeItem('numWins');
+	localStorage.removeItem('numLosses');
 	showStats();
 }
 
@@ -306,17 +301,15 @@ function showStats() {
 		for (const i in numWins) {
 			max = Math.max(max, numWins[i]);
 		}
-		const factor = 260 / max;
-
 		let sum = 0;
 		let num = 0;
 		html += '<table id="game-stats">';
 		for (let i = 1; i <= 6; i++) {
-			const width = factor * (numWins[i] || 0);
+			const pct = max ? ((numWins[i] || 0) / max) * 100 : 0;
 			html += '<tr>';
 			html += `<td>${i}</td>`;
 			if (numWins[i]) {
-				html += `<td><div class="num-wins-bar" style="width: ${width}px;">${numWins[i]}</div></td>`;
+				html += `<td><div class="num-wins-bar" style="width: ${pct}%;">${numWins[i]}</div></td>`;
 				sum += i * numWins[i];
 				num += numWins[i];
 			}
