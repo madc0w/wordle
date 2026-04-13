@@ -4987,4 +4987,5 @@ dict = [
 	'dross',
 	'moult',
 	'ovoid',
+	'divot',
 ];
