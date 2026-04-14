@@ -120,8 +120,10 @@ body {
 	margin: 22px;
 	font-size: 36px;
 	width: calc(100% - 44px);
-	max-width: 400px;
+	max-width: 496px;
 	color: #44993d;
+	display: flex;
+	align-items: center;
 }
 
 #header img {
@@ -131,7 +133,7 @@ body {
 	border-style: solid;
 	border-color: black;
 	box-shadow: 4px 4px 8px 2px #888;
-	float: right;
+	margin-left: 8px;
 }
 
 #header img:hover {
@@ -141,6 +143,7 @@ body {
 
 #info {
 	display: inline-block;
+	margin-left: auto;
 }
 
 #clock {
@@ -369,6 +372,11 @@ body {
 		margin: 12px;
 		width: calc(100% - 24px);
 		overflow: hidden;
+	}
+
+	#header img {
+		box-shadow: none;
+		background-color: #44993d;
 	}
 
 	#word-space-size {

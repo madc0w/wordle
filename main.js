@@ -165,7 +165,7 @@ function keyup(e) {
 			// console.log('currGuess', currGuess);
 			// console.log('guessNum', guessNum);
 
-			if (guessPossibilities.length > 1) {
+			if (guessPossibilities.length > 1 && !(isWin || isGameOver)) {
 				isGood[guessPossibilities.length - 1] = guessPossibilities[
 					guessPossibilities.length - 2
 				].includes(currGuess.toLowerCase());
