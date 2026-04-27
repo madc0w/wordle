@@ -1362,9 +1362,9 @@ dict = [
 	'cocoa',
 	'mixes',
 	'panty',
-	'aires',
+	// 'aires',
 	'bulls',
-	'orion',
+	// 'orion',
 	'hurry',
 	'clash',
 	'biker',
@@ -4988,4 +4988,5 @@ dict = [
 	'moult',
 	'ovoid',
 	'divot',
+	'graze',
 ];

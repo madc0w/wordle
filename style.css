@@ -193,9 +193,27 @@ body {
 	border-radius: 6px 6px 0 0;
 }
 
-#stats-modal .button {
-	margin: 12px auto 0;
-	width: 80%;
+#stats-modal .modal-actions {
+	margin-top: 12px;
+}
+
+#reset-stats-confirm-text {
+	margin-top: 12px;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.modal-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.modal-actions .button {
+	flex: 1 1 0;
+	font-size: 20px;
+	padding: 8px 6px;
+	margin-top: 0;
 }
 
 #stats-modal #no-stats {
@@ -321,18 +339,18 @@ body {
 	}
 }
 
-.kb-key[data-key="A"],
-.kb-key[data-key="E"],
-.kb-key[data-key="I"],
-.kb-key[data-key="O"],
-.kb-key[data-key="U"],
-.kb-key[data-key="Y"] {
-	background-color: rgb(206, 255, 200);
-}
-
 .kb-key.kb-eliminated {
 	background-color: #c44;
 	color: #fff;
+}
+
+.kb-key.kb-included {
+	background-color: rgb(106, 170, 100);
+	color: #fff;
+}
+
+.kb-key.kb-vowel {
+	background-color: rgb(206, 255, 200);
 }
 
 .kb-row {

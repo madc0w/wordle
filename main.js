@@ -36,21 +36,13 @@ function onLoad() {
 	wordPossibilitiesContainer = document.getElementById('word-possibilities');
 	wordSpaceSizeContainer = document.getElementById('word-space-size');
 
-	for (const dictWord of dict) {
-		if (!uniqueDict.includes(dictWord)) {
-			uniqueDict.push(dictWord);
+	if (uniqueDict.length === 0) {
+		for (const dictWord of dict) {
+			if (!uniqueDict.includes(dictWord)) {
+				uniqueDict.push(dictWord);
+			}
 		}
 	}
-
-	if (uniqueDict.length == 1) {
-		wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} word possible`;
-	} else {
-		wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} words possible`;
-	}
-
-	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
-	// word = uniqueDict[0];
-	// console.log(word);
 
 	document.addEventListener('keyup', keyup);
 	document.querySelectorAll('.kb-key').forEach((key) => {
@@ -72,6 +64,37 @@ function onLoad() {
 			closeModals();
 		}
 	});
+	resetGame();
+}
+
+function resetGame() {
+	clearInterval(clockTimerId);
+	clockTimerId = null;
+	clock = 0;
+	isGameOver = false;
+	word = uniqueDict[Math.floor(Math.random() * uniqueDict.length)];
+
+	if (uniqueDict.length == 1) {
+		wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} word possible`;
+	} else {
+		wordSpaceSizeContainer.innerHTML = `${uniqueDict.length} words possible`;
+	}
+
+	guesses.length = 1;
+	guesses[0] = '';
+	guessPossibilities.length = 0;
+	possibilities = [];
+	for (let i = 0; i < isGood.length; i++) {
+		isGood[i] = true;
+	}
+
+	gameResultContainer.classList.add('hidden');
+	document.getElementById('keyboard').style.display = '';
+	updateLetterStatuses();
+	clockContainer.innerHTML = '-';
+	closeModals();
+
+	// Re-render an empty board in the initial state.
 	keyup({ key: '' });
 }
 
@@ -174,41 +197,7 @@ function keyup(e) {
 				// 	guessPossibilities[guessPossibilities.length - 2]
 				// );
 			}
-			// Build set of impossible letters (confirmed not in the word)
-			const impossibleLetters = new Set();
-			for (let gi = 0; gi < guesses.length - 1; gi++) {
-				for (const ch of guesses[gi]) {
-					if (!word.includes(ch.toLowerCase())) {
-						impossibleLetters.add(ch.toUpperCase());
-					}
-				}
-			}
-
-			let html = '';
-			for (
-				let ch = 'A';
-				ch <= 'Z';
-				ch = String.fromCharCode(ch.charCodeAt() + 1)
-			) {
-				if (impossibleLetters.has(ch)) continue;
-				const isVowel = 'AEIOUY'.includes(ch);
-				html += `<div class="guess-letter ${
-					isVowel ? 'vowel' : ''
-				}">${ch}</div>`;
-			}
-			unusedLettersContainer.innerHTML = html;
-
-			// Mark impossible letters on keyboard
-			document.querySelectorAll('.kb-key').forEach((key) => {
-				const k = key.dataset.key;
-				if (k && k.length === 1) {
-					if (impossibleLetters.has(k.toUpperCase())) {
-						key.classList.add('kb-eliminated');
-					} else {
-						key.classList.remove('kb-eliminated');
-					}
-				}
-			});
+			updateLetterStatuses();
 		} else {
 			isNotAWord = true;
 			sounds.notAWord.play();
@@ -221,6 +210,8 @@ function keyup(e) {
 		let html = '';
 		for (let guessNum = 0; guessNum < Math.min(guesses.length, 6); guessNum++) {
 			const guess = guesses[guessNum];
+			const submittedPattern =
+				guessNum < guesses.length - 1 ? getGuessPattern(guess, word) : null;
 			if (guess.toLowerCase() == word && e.key == 'Enter') {
 				isGameOver = true;
 				clearInterval(clockTimerId);
@@ -232,14 +223,8 @@ function keyup(e) {
 			let i = 0;
 			for (const ch of guess) {
 				let className = '';
-				if (guessNum < guesses.length - 1) {
-					if (word[i] == ch.toLowerCase()) {
-						className = 'pos-match';
-					} else if (word.includes(ch.toLowerCase())) {
-						className = 'match';
-					} else {
-						className = 'no-match';
-					}
+				if (submittedPattern) {
+					className = patternToClass(submittedPattern[i]);
 				} else if (isLetterRuledOut(ch, i)) {
 					className = 'ruled-out';
 				}
@@ -275,12 +260,67 @@ function keyup(e) {
 	}
 }
 
+function getLetterStatuses() {
+	const ruledOutLetters = new Set();
+	const ruledInLetters = new Set();
+
+	for (let gi = 0; gi < guesses.length - 1; gi++) {
+		for (const ch of guesses[gi]) {
+			const upper = ch.toUpperCase();
+			if (word.includes(ch.toLowerCase())) {
+				ruledInLetters.add(upper);
+			} else {
+				ruledOutLetters.add(upper);
+			}
+		}
+	}
+
+	return { ruledInLetters, ruledOutLetters };
+}
+
+function updateLetterStatuses() {
+	const { ruledInLetters, ruledOutLetters } = getLetterStatuses();
+
+	let html = '';
+	for (let ch = 'A'; ch <= 'Z'; ch = String.fromCharCode(ch.charCodeAt() + 1)) {
+		const isVowel = 'AEIOUY'.includes(ch);
+		const className = ruledOutLetters.has(ch)
+			? 'ruled-out'
+			: ruledInLetters.has(ch)
+				? 'pos-match'
+				: isVowel
+					? 'vowel'
+					: '';
+		html += `<div class="guess-letter ${className}">${ch}</div>`;
+	}
+	unusedLettersContainer.innerHTML = html;
+
+	document.querySelectorAll('.kb-key').forEach((key) => {
+		const k = key.dataset.key;
+		if (k && k.length === 1) {
+			const upper = k.toUpperCase();
+			key.classList.toggle('kb-eliminated', ruledOutLetters.has(upper));
+			key.classList.toggle('kb-included', ruledInLetters.has(upper));
+			key.classList.toggle(
+				'kb-vowel',
+				'AEIOUY'.includes(upper) &&
+					!ruledOutLetters.has(upper) &&
+					!ruledInLetters.has(upper),
+			);
+		}
+	});
+}
+
 function clearStats() {
 	localStorage.removeItem('times');
 	localStorage.removeItem('numGames');
 	localStorage.removeItem('numWins');
 	localStorage.removeItem('numLosses');
 	showStats();
+}
+
+function showResetStatsConfirmation() {
+	showModal('reset-stats-confirm-modal');
 }
 
 function showStats() {
@@ -374,37 +414,48 @@ function formatTime(t) {
 	return '-';
 }
 
-function guessMatchesWord(guess, dictWord) {
-	let regex = '';
-	const charMatches = [];
-	const noCharMatches = [];
-	let i = 0;
-	for (const ch of guess) {
-		const lcChar = ch.toLowerCase();
-		if (word[i++] == lcChar) {
-			regex += lcChar;
-		} else if (word.includes(lcChar)) {
-			regex += `[^${lcChar}]`;
-			charMatches.push(lcChar);
+function getGuessPattern(guess, targetWord) {
+	const guessLc = guess.toLowerCase();
+	const targetLc = targetWord.toLowerCase();
+	const pattern = Array(guessLc.length).fill('b');
+	const remainingLetters = {};
+
+	for (let i = 0; i < guessLc.length; i++) {
+		if (guessLc[i] === targetLc[i]) {
+			pattern[i] = 'g';
 		} else {
-			regex += '.';
-			noCharMatches.push(lcChar);
+			const ch = targetLc[i];
+			remainingLetters[ch] = (remainingLetters[ch] || 0) + 1;
 		}
 	}
-	const r = new RegExp(regex);
-	if (dictWord.match(r)) {
-		for (const c of charMatches) {
-			if (!dictWord.includes(c)) {
-				return false;
+
+	for (let i = 0; i < guessLc.length; i++) {
+		if (pattern[i] !== 'g') {
+			const ch = guessLc[i];
+			if (remainingLetters[ch] > 0) {
+				pattern[i] = 'y';
+				remainingLetters[ch]--;
 			}
 		}
-		for (const c of noCharMatches) {
-			if (dictWord.includes(c)) {
-				return false;
-			}
-		}
-		return true;
 	}
+
+	return pattern;
+}
+
+function patternToClass(patternChar) {
+	if (patternChar === 'g') {
+		return 'pos-match';
+	}
+	if (patternChar === 'y') {
+		return 'match';
+	}
+	return 'no-match';
+}
+
+function guessMatchesWord(guess, dictWord) {
+	const actualPattern = getGuessPattern(guess, word).join('');
+	const candidatePattern = getGuessPattern(guess, dictWord).join('');
+	return actualPattern === candidatePattern;
 }
 
 function showGuessPossibilities(guessNum) {

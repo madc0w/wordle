@@ -67,15 +67,28 @@
 		</div>
 		<div id="game-result" class="hidden">
 			<div id="result-text"></div>
-			<div class="button" onClick="location.href = location.href">
-				Play again!
-			</div>
+			<div class="button" onClick="resetGame()">Play again!</div>
 		</div>
 
 		<div id="stats-modal" class="hidden modal">
 			<div class="header">Stats</div>
 			<div id="stats"></div>
-			<div class="button" onClick="clearStats()">Clear stats</div>
+			<div class="modal-actions">
+				<div class="button" onClick="closeModals()">OK</div>
+				<div class="button" onClick="showResetStatsConfirmation()">
+					Reset stats
+				</div>
+			</div>
+		</div>
+		<div id="reset-stats-confirm-modal" class="hidden modal">
+			<div class="header">Reset stats?</div>
+			<div id="reset-stats-confirm-text">
+				This will permanently clear all your game stats.
+			</div>
+			<div class="modal-actions">
+				<div class="button" onClick="showStats()">Cancel</div>
+				<div class="button" onClick="clearStats()">Reset</div>
+			</div>
 		</div>
 		<div id="possibilities" class="hidden modal">
 			<div class="header">Words possible</div>
