@@ -4989,4 +4989,5 @@ dict = [
 	'ovoid',
 	'divot',
 	'graze',
+	'chuff',
 ];
