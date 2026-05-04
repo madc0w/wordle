@@ -420,7 +420,7 @@ dict = [
 	'sleep',
 	'scene',
 	'drink',
-	'intel',
+	// 'intel',
 	'rings',
 	'guess',
 	'ahead',
@@ -4973,7 +4973,7 @@ dict = [
 	'piler',
 	'viler',
 	'biter',
-	'citer',
+	// 'citer',
 	'riper',
 	'wiser',
 	'mover',
@@ -4990,4 +4990,5 @@ dict = [
 	'divot',
 	'graze',
 	'chuff',
+	'muffs',
 ];
