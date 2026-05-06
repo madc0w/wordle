@@ -4991,4 +4991,5 @@ dict = [
 	'graze',
 	'chuff',
 	'muffs',
+	'yurts',
 ];
